@@ -111,31 +111,32 @@ class Videos {
         }
         
         if let Imid = data["id"] as? JSONDictionary,
-            vImid = Imid["label"] as? String {
+            vid = Imid["attributes"] as? JSONDictionary,
+            vImid = vid["im:id"] as? String {
             self._vImid = vImid
         } else {
             self._vImid = ""
         }
         
-        if let Genre = data["category"] as? NSDictionary,
-            genree = Genre["attributes"] as? NSDictionary,
+        if let Genre = data["category"] as? JSONDictionary,
+            genree = Genre["attributes"] as? JSONDictionary,
             vGenre = genree["term"] as? String {
             self._vGenre = vGenre
         } else {
             self._vGenre = ""
         }
         
-        if let link = data["link"] as? NSArray,
-            linkk = link[0] as? NSDictionary,
-            linkkk = linkk["attributes"] as? NSDictionary,
+        if let link = data["link"] as? JSONArray,
+            linkk = link[0] as? JSONDictionary,
+            linkkk = linkk["attributes"] as? JSONDictionary,
             vLinkToItunes = linkkk["href"] as? String {
             self._vLinkToItunes = vLinkToItunes
         } else {
             self._vLinkToItunes = ""
         }
         
-        if let release = data["im:releaseDate"] as? NSDictionary,
-            let releasee = release["attributes"] as? NSDictionary,
+        if let release = data["im:releaseDate"] as? JSONDictionary,
+            let releasee = release["attributes"] as? JSONDictionary,
             let releaseDate = releasee["label"] as? String {
             self._vReleaseDate = releaseDate
         } else {
