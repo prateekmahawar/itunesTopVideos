@@ -15,6 +15,8 @@
 		C7525B821D352959003665F9 /* itunesTopVideosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7525B811D352959003665F9 /* itunesTopVideosTests.swift */; };
 		C7525B8D1D352959003665F9 /* itunesTopVideosUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7525B8C1D352959003665F9 /* itunesTopVideosUITests.swift */; };
 		C7525B9F1D3531AD003665F9 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7525B9E1D3531AD003665F9 /* APIManager.swift */; };
+		C788B2711D357B6700C5B34F /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C788B2701D357B6700C5B34F /* Constants.swift */; };
+		C788B2731D357BE400C5B34F /* MusicVideo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C788B2721D357BE400C5B34F /* MusicVideo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		C7525B8C1D352959003665F9 /* itunesTopVideosUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = itunesTopVideosUITests.swift; sourceTree = "<group>"; };
 		C7525B8E1D352959003665F9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C7525B9E1D3531AD003665F9 /* APIManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
+		C788B2701D357B6700C5B34F /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		C788B2721D357BE400C5B34F /* MusicVideo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicVideo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +103,7 @@
 		C7525B6B1D352959003665F9 /* itunesTopVideos */ = {
 			isa = PBXGroup;
 			children = (
+				C788B26F1D357B4A00C5B34F /* Util */,
 				C7525B9D1D352C14003665F9 /* Supporting Files */,
 				C7525B9C1D352BC5003665F9 /* Model */,
 				C7525B9B1D352BBF003665F9 /* View */,
@@ -147,6 +152,7 @@
 			isa = PBXGroup;
 			children = (
 				C7525B9E1D3531AD003665F9 /* APIManager.swift */,
+				C788B2721D357BE400C5B34F /* MusicVideo.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -158,6 +164,14 @@
 				C7525B781D352959003665F9 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C788B26F1D357B4A00C5B34F /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				C788B2701D357B6700C5B34F /* Constants.swift */,
+			);
+			name = Util;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -296,7 +310,9 @@
 			files = (
 				C7525B9F1D3531AD003665F9 /* APIManager.swift in Sources */,
 				C7525B6F1D352959003665F9 /* ViewController.swift in Sources */,
+				C788B2731D357BE400C5B34F /* MusicVideo.swift in Sources */,
 				C7525B6D1D352959003665F9 /* AppDelegate.swift in Sources */,
+				C788B2711D357B6700C5B34F /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -527,6 +543,7 @@
 				C7525B931D352959003665F9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C7525B941D352959003665F9 /* Build configuration list for PBXNativeTarget "itunesTopVideosTests" */ = {
 			isa = XCConfigurationList;
@@ -535,6 +552,7 @@
 				C7525B961D352959003665F9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C7525B971D352959003665F9 /* Build configuration list for PBXNativeTarget "itunesTopVideosUITests" */ = {
 			isa = XCConfigurationList;
@@ -543,6 +561,7 @@
 				C7525B991D352959003665F9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
