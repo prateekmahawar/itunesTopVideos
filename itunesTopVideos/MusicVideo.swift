@@ -33,6 +33,34 @@ class Videos {
         return _vVideoUrl
     }
     
+    var vPrice : String {
+        return _vPrice
+    }
+    
+    var vRights : String {
+        return _vRights
+    }
+    
+    var vArtist : String {
+        return _vArtist
+    }
+    
+    var vImid : String {
+        return _vImid
+    }
+    
+    var vGenre : String {
+        return _vGenre
+    }
+    
+    var vLinkToItunes : String {
+        return _vLinkToItunes
+    }
+    var vReleaseDate: String {
+        return _vReleaseDate
+    }
+    
+    
     init (data:JSONDictionary) {
         
         if let name = data["im:name"] as? JSONDictionary,
