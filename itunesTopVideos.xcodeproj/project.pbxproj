@@ -97,12 +97,11 @@
 		C7525B6B1D352959003665F9 /* itunesTopVideos */ = {
 			isa = PBXGroup;
 			children = (
+				C7525B9D1D352C14003665F9 /* Supporting Files */,
+				C7525B9C1D352BC5003665F9 /* Model */,
+				C7525B9B1D352BBF003665F9 /* View */,
+				C7525B9A1D352BB8003665F9 /* Controller */,
 				C7525B6C1D352959003665F9 /* AppDelegate.swift */,
-				C7525B6E1D352959003665F9 /* ViewController.swift */,
-				C7525B701D352959003665F9 /* Main.storyboard */,
-				C7525B731D352959003665F9 /* Assets.xcassets */,
-				C7525B751D352959003665F9 /* LaunchScreen.storyboard */,
-				C7525B781D352959003665F9 /* Info.plist */,
 			);
 			path = itunesTopVideos;
 			sourceTree = "<group>";
@@ -123,6 +122,39 @@
 				C7525B8E1D352959003665F9 /* Info.plist */,
 			);
 			path = itunesTopVideosUITests;
+			sourceTree = "<group>";
+		};
+		C7525B9A1D352BB8003665F9 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				C7525B6E1D352959003665F9 /* ViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		C7525B9B1D352BBF003665F9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C7525B701D352959003665F9 /* Main.storyboard */,
+				C7525B751D352959003665F9 /* LaunchScreen.storyboard */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		C7525B9C1D352BC5003665F9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		C7525B9D1D352C14003665F9 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C7525B731D352959003665F9 /* Assets.xcassets */,
+				C7525B781D352959003665F9 /* Info.plist */,
+			);
+			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -405,9 +437,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = itunesTopVideos/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Prateek.itunesTopVideos;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -416,9 +450,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = itunesTopVideos/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Prateek.itunesTopVideos;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
