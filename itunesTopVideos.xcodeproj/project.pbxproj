@@ -14,6 +14,7 @@
 		C7525B771D352959003665F9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7525B751D352959003665F9 /* LaunchScreen.storyboard */; };
 		C7525B821D352959003665F9 /* itunesTopVideosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7525B811D352959003665F9 /* itunesTopVideosTests.swift */; };
 		C7525B8D1D352959003665F9 /* itunesTopVideosUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7525B8C1D352959003665F9 /* itunesTopVideosUITests.swift */; };
+		C7525B9F1D3531AD003665F9 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7525B9E1D3531AD003665F9 /* APIManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		C7525B881D352959003665F9 /* itunesTopVideosUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = itunesTopVideosUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7525B8C1D352959003665F9 /* itunesTopVideosUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = itunesTopVideosUITests.swift; sourceTree = "<group>"; };
 		C7525B8E1D352959003665F9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C7525B9E1D3531AD003665F9 /* APIManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,6 +146,7 @@
 		C7525B9C1D352BC5003665F9 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				C7525B9E1D3531AD003665F9 /* APIManager.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -291,6 +294,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C7525B9F1D3531AD003665F9 /* APIManager.swift in Sources */,
 				C7525B6F1D352959003665F9 /* ViewController.swift in Sources */,
 				C7525B6D1D352959003665F9 /* AppDelegate.swift in Sources */,
 			);
