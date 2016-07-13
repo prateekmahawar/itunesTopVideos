@@ -8,8 +8,7 @@
 
 import UIKit
 var reachability : Reachability?
-var reachabilitystatus = WIFI
-
+var reachabilitystatus = " "
 
 
 @UIApplicationMain
@@ -18,9 +17,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
     
     var internetCheck: Reachability?
+
     
-
-
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
       
 //      NSURLCache.setSharedURLCache((NSURLCache(memoryCapacity: 0, diskCapacity: 0, diskPath: nil)))
@@ -29,6 +27,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         internetCheck = Reachability.reachabilityForInternetConnection()
         internetCheck?.startNotifier()
+        statusChangedWithReachability(internetCheck!)
         
         return true
     }
