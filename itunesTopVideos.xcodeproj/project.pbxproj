@@ -15,6 +15,7 @@
 		C7525B821D352959003665F9 /* itunesTopVideosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7525B811D352959003665F9 /* itunesTopVideosTests.swift */; };
 		C7525B8D1D352959003665F9 /* itunesTopVideosUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7525B8C1D352959003665F9 /* itunesTopVideosUITests.swift */; };
 		C7525B9F1D3531AD003665F9 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7525B9E1D3531AD003665F9 /* APIManager.swift */; };
+		C75FFECA1D368C690086EE2F /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = C75FFEC91D368C690086EE2F /* Reachability.m */; };
 		C788B2711D357B6700C5B34F /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C788B2701D357B6700C5B34F /* Constants.swift */; };
 		C788B2731D357BE400C5B34F /* MusicVideo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C788B2721D357BE400C5B34F /* MusicVideo.swift */; };
 /* End PBXBuildFile section */
@@ -51,6 +52,9 @@
 		C7525B8C1D352959003665F9 /* itunesTopVideosUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = itunesTopVideosUITests.swift; sourceTree = "<group>"; };
 		C7525B8E1D352959003665F9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C7525B9E1D3531AD003665F9 /* APIManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
+		C75FFEC71D368C680086EE2F /* itunesTopVideos-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "itunesTopVideos-Bridging-Header.h"; sourceTree = "<group>"; };
+		C75FFEC81D368C690086EE2F /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		C75FFEC91D368C690086EE2F /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
 		C788B2701D357B6700C5B34F /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		C788B2721D357BE400C5B34F /* MusicVideo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicVideo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -103,6 +107,7 @@
 		C7525B6B1D352959003665F9 /* itunesTopVideos */ = {
 			isa = PBXGroup;
 			children = (
+				C75FFEC61D368BB90086EE2F /* Obj-C */,
 				C788B26F1D357B4A00C5B34F /* Util */,
 				C7525B9D1D352C14003665F9 /* Supporting Files */,
 				C7525B9C1D352BC5003665F9 /* Model */,
@@ -164,6 +169,16 @@
 				C7525B781D352959003665F9 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C75FFEC61D368BB90086EE2F /* Obj-C */ = {
+			isa = PBXGroup;
+			children = (
+				C75FFEC81D368C690086EE2F /* Reachability.h */,
+				C75FFEC91D368C690086EE2F /* Reachability.m */,
+				C75FFEC71D368C680086EE2F /* itunesTopVideos-Bridging-Header.h */,
+			);
+			name = "Obj-C";
 			sourceTree = "<group>";
 		};
 		C788B26F1D357B4A00C5B34F /* Util */ = {
@@ -312,6 +327,7 @@
 				C7525B6F1D352959003665F9 /* ViewController.swift in Sources */,
 				C788B2731D357BE400C5B34F /* MusicVideo.swift in Sources */,
 				C7525B6D1D352959003665F9 /* AppDelegate.swift in Sources */,
+				C75FFECA1D368C690086EE2F /* Reachability.m in Sources */,
 				C788B2711D357B6700C5B34F /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -456,11 +472,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = itunesTopVideos/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Prateek.itunesTopVideos;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "itunesTopVideos/itunesTopVideos-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -469,11 +488,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = itunesTopVideos/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Prateek.itunesTopVideos;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "itunesTopVideos/itunesTopVideos-Bridging-Header.h";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

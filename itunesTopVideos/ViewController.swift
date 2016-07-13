@@ -26,6 +26,8 @@ class ViewController: UIViewController {
 //        }
 //        alert.addAction(okAction)
 //        self.presentViewController(alert, animated: true, completion: nil)
+        
+        print(reachabilitystatus)
         self.videos = result
         for item in videos {
             print("Name Of Artist = \(item.vArtist)")

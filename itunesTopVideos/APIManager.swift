@@ -24,7 +24,7 @@ class APIManager {
                 print(error!.localizedDescription)
                 }
              else {
-                print(data)
+                
                 do {
     if let json = try NSJSONSerialization.JSONObjectWithData(data!, options: .AllowFragments) as? JSONDictionary, feed = json["feed"] as? JSONDictionary, entries = feed["entry"] as? JSONArray {
         
