@@ -11,6 +11,7 @@ import UIKit
 class DetailVC: UIViewController {
 
     var videos:Videos!
+    var sec:Bool = false
     
     @IBOutlet weak var vName: UILabel!
     @IBOutlet weak var videoImg: UIImageView!
@@ -20,9 +21,8 @@ class DetailVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         title = videos.vArtist
-        
-        
         vName.text = videos.vName
         vPrice.text = videos.vPrice
         vRights.text = videos.vRights

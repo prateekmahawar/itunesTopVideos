@@ -13,6 +13,7 @@ class Videos {
     var vRank = 0
     var lablImage :String
     
+    
     private var _vName : String
     private var _vRights : String
     private var _vPrice : String

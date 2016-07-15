@@ -20,6 +20,7 @@
 		C788B2711D357B6700C5B34F /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C788B2701D357B6700C5B34F /* Constants.swift */; };
 		C788B2731D357BE400C5B34F /* MusicVideo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C788B2721D357BE400C5B34F /* MusicVideo.swift */; };
 		C7B89D611D38F69600CAF6F6 /* MusicVideoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B89D601D38F69600CAF6F6 /* MusicVideoCell.swift */; };
+		C7CFC98A1D39660700235DEF /* SettingTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7CFC9891D39660700235DEF /* SettingTVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +62,7 @@
 		C788B2701D357B6700C5B34F /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		C788B2721D357BE400C5B34F /* MusicVideo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicVideo.swift; sourceTree = "<group>"; };
 		C7B89D601D38F69600CAF6F6 /* MusicVideoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicVideoCell.swift; sourceTree = "<group>"; };
+		C7CFC9891D39660700235DEF /* SettingTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingTVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,6 +147,7 @@
 			children = (
 				C7525B6E1D352959003665F9 /* ViewController.swift */,
 				C7761BCB1D393A3A007B6D1C /* DetailVC.swift */,
+				C7CFC9891D39660700235DEF /* SettingTVC.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -332,6 +335,7 @@
 				C7525B9F1D3531AD003665F9 /* APIManager.swift in Sources */,
 				C7525B6F1D352959003665F9 /* ViewController.swift in Sources */,
 				C788B2731D357BE400C5B34F /* MusicVideo.swift in Sources */,
+				C7CFC98A1D39660700235DEF /* SettingTVC.swift in Sources */,
 				C7525B6D1D352959003665F9 /* AppDelegate.swift in Sources */,
 				C75FFECA1D368C690086EE2F /* Reachability.m in Sources */,
 				C7761BCC1D393A3A007B6D1C /* DetailVC.swift in Sources */,

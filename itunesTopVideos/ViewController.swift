@@ -16,6 +16,7 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
     
     override func viewDidLoad() {
         super.viewDidLoad()
+
         self.automaticallyAdjustsScrollViewInsets = false
         tableView.dataSource = self
         tableView.delegate = self
