@@ -33,32 +33,32 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
         return videos.count
     }
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath)
-        let video = videos[indexPath.row]
-        cell.textLabel?.text = ("\(indexPath.row+1)")
-        cell.detailTextLabel?.text = video.vName
-        return cell
+        if let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as?  MusicVideoCell {
+        cell.video = videos[indexPath.row]
+            return cell
+        } else {
+            return MusicVideoCell()
+        }
     }
 
     
     func didLoadData(result:[Videos]) {
-    
-        print(reachabilitystatus)
+        //        for item in videos {
+        //        //    print("Name Of Artist = \(item.vArtist)")
+        //        }
+        //        for i in 0  ..< videos.count  {
+        //            let video = videos[i]
+        //          //  print("Name Of Artist = \(video.vArtist)")
+        //        }
+        
         self.videos = result
-        for item in videos {
-            print("Name Of Artist = \(item.vArtist)")
-        }
-        for i in 0  ..< videos.count  {
-            let video = videos[i]
-            print("Name Of Artist = \(video.vArtist)")
-        }
         tableView.reloadData()
         
     }
     func reachabilityStatusChanged() {
         switch reachabilitystatus {
         case NOACCESS:
-            view.backgroundColor = UIColor.redColor()
+            //view.backgroundColor = UIColor.redColor()
             //Move Back to main Queue
             dispatch_async(dispatch_get_main_queue()){
             let alert = UIAlertController(title: "No Internet Access", message: "Please Make sure", preferredStyle: .Alert)
@@ -72,7 +72,7 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
                 action -> () in
                 print("Delete")
             }
-            let OkAction = UIAlertAction(title: "ok", style: .Default) {
+            let OkAction = UIAlertAction(title: "OK", style: .Default) {
                 action -> () in
                 print("OK")
             }
@@ -83,7 +83,7 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
         self.presentViewController(alert, animated: true, completion: nil)
             }
         default:
-            view.backgroundColor = UIColor.greenColor()
+            //view.backgroundColor = UIColor.greenColor()
             if videos.count > 0 {
                 print("Do Not Refresh API")
                 
@@ -99,7 +99,7 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
     
     func runAPI() {
         let api = APIManager()
-        api.loadData("https://itunes.apple.com/us/rss/topmusicvideos/limit=25/json", completion: didLoadData)
+        api.loadData("https://itunes.apple.com/us/rss/topmusicvideos/limit=50/json", completion: didLoadData)
     }
     
    deinit

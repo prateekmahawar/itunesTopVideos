@@ -18,6 +18,7 @@
 		C75FFECA1D368C690086EE2F /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = C75FFEC91D368C690086EE2F /* Reachability.m */; };
 		C788B2711D357B6700C5B34F /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C788B2701D357B6700C5B34F /* Constants.swift */; };
 		C788B2731D357BE400C5B34F /* MusicVideo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C788B2721D357BE400C5B34F /* MusicVideo.swift */; };
+		C7B89D611D38F69600CAF6F6 /* MusicVideoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B89D601D38F69600CAF6F6 /* MusicVideoCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		C75FFEC91D368C690086EE2F /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
 		C788B2701D357B6700C5B34F /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		C788B2721D357BE400C5B34F /* MusicVideo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicVideo.swift; sourceTree = "<group>"; };
+		C7B89D601D38F69600CAF6F6 /* MusicVideoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicVideoCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,6 +149,7 @@
 		C7525B9B1D352BBF003665F9 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				C7B89D601D38F69600CAF6F6 /* MusicVideoCell.swift */,
 				C7525B701D352959003665F9 /* Main.storyboard */,
 				C7525B751D352959003665F9 /* LaunchScreen.storyboard */,
 			);
@@ -329,6 +332,7 @@
 				C7525B6D1D352959003665F9 /* AppDelegate.swift in Sources */,
 				C75FFECA1D368C690086EE2F /* Reachability.m in Sources */,
 				C788B2711D357B6700C5B34F /* Constants.swift in Sources */,
+				C7B89D611D38F69600CAF6F6 /* MusicVideoCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
