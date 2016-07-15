@@ -11,6 +11,7 @@ import Foundation
 class Videos {
     
     var vRank = 0
+    var lablImage :String
     
     private var _vName : String
     private var _vRights : String
@@ -22,6 +23,9 @@ class Videos {
     private var _vGenre : String
     private var _vLinkToItunes : String
     private var _vReleaseDate : String
+    
+    
+    var vImageData:NSData?
     
     
     var vName: String {
@@ -144,6 +148,14 @@ class Videos {
             self._vReleaseDate = releaseDate
         } else {
             self._vReleaseDate = ""
+        }
+        
+        if let img = data["im:image"] as? JSONArray,
+            image = img[2] as? JSONDictionary,
+            immage = image["label"] as? String {
+            lablImage = immage
+        } else {
+            lablImage = ""
         }
         
     }

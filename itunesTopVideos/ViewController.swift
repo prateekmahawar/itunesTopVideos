@@ -21,6 +21,7 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
         tableView.delegate = self
         
         NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(ViewController.reachabilityStatusChanged) , name: "ReachStatusChanged", object: nil)
+        
         reachabilityStatusChanged()
         
     }
@@ -101,7 +102,7 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
     
     func runAPI() {
         let api = APIManager()
-        api.loadData("https://itunes.apple.com/us/rss/topmusicvideos/limit=50/json", completion: didLoadData)
+        api.loadData("https://itunes.apple.com/us/rss/topmusicvideos/limit=100/json", completion: didLoadData)
     }
     
    deinit
