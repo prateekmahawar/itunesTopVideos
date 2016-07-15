@@ -33,19 +33,21 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
         return videos.count
     }
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        if let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as?  MusicVideoCell {
+        if let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as?  MusicVideoCell{
         cell.video = videos[indexPath.row]
             return cell
-        } else {
+        }
+        else {
             return MusicVideoCell()
         }
+        
     }
 
     
     func didLoadData(result:[Videos]) {
-        //        for item in videos {
-        //        //    print("Name Of Artist = \(item.vArtist)")
-        //        }
+//                for item in videos {
+//                    print("Name Of Artist = \(item.vArtist)")
+//                }
         //        for i in 0  ..< videos.count  {
         //            let video = videos[i]
         //          //  print("Name Of Artist = \(video.vArtist)")
