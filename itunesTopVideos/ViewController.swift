@@ -25,7 +25,10 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
         reachabilityStatusChanged()
         
     }
-    
+    private struct storyBoard {
+        static let cellReuseIdentifier = "cell"
+        static let segueIdentifier = "musicDetail"
+    }
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
@@ -34,7 +37,7 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
         return videos.count
     }
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        if let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as?  MusicVideoCell{
+        if let cell = tableView.dequeueReusableCellWithIdentifier(storyBoard.cellReuseIdentifier, forIndexPath: indexPath) as?  MusicVideoCell{
         cell.video = videos[indexPath.row]
             return cell
         }
@@ -71,10 +74,10 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
                 //Perfrom Actions
                 print("Cancel")
             }
-            let deleteAction = UIAlertAction(title: "Delete", style: .Destructive) {
-                action -> () in
-                print("Delete")
-            }
+//            let deleteAction = UIAlertAction(title: "Delete", style: .Destructive) {
+//                action -> () in
+//                print("Delete")
+//            }
             let OkAction = UIAlertAction(title: "OK", style: .Default) {
                 action -> () in
                 print("OK")
@@ -82,7 +85,7 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
         //order MATTERS
         alert.addAction(OkAction)
         alert.addAction(cancelAction)
-        alert.addAction(deleteAction)
+     //   alert.addAction(deleteAction)
         self.presentViewController(alert, animated: true, completion: nil)
             }
         default:
@@ -110,7 +113,17 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
     NSNotificationCenter.defaultCenter().removeObserver(self, name: "ReachStatusChanged", object: nil)
     }
     
-    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == storyBoard.segueIdentifier {
+            if let indexPath = tableView.indexPathForSelectedRow {
+                let video = videos[indexPath.row]
+                let dVC = segue.destinationViewController as? DetailVC
+                dVC!.videos = video
+                
+                
+            }
+        }
+    }
     
     
     
