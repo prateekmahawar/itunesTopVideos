@@ -15,6 +15,7 @@ class SettingTVC: UITableViewController, MFMailComposeViewControllerDelegate {
     @IBOutlet weak var feedbackDisplay: UILabel!
     @IBOutlet weak var securityDisplay: UILabel!
     @IBOutlet weak var bestImageDisplay: UILabel!
+    @IBOutlet weak var bestImageSlider: UISwitch!
     @IBOutlet weak var touchId: UISwitch!
     @IBOutlet weak var apiCount: UILabel!
     @IBOutlet weak var sliderCnt: UISlider!
@@ -26,9 +27,11 @@ class SettingTVC: UITableViewController, MFMailComposeViewControllerDelegate {
         tableView.alwaysBounceVertical = false
         
         
+        bestImageSlider.on = NSUserDefaults.standardUserDefaults().boolForKey("BmsSetting")
         touchId.on = NSUserDefaults.standardUserDefaults().boolForKey("SecSetting")
         if (NSUserDefaults.standardUserDefaults().objectForKey("APICNT") != nil)
         {
+            
             let theValue = NSUserDefaults.standardUserDefaults().objectForKey("APICNT") as! Int
             apiCount.text = "\(theValue)"
             sliderCnt.value = Float(theValue)
@@ -37,6 +40,14 @@ class SettingTVC: UITableViewController, MFMailComposeViewControllerDelegate {
             apiCount.text = ("\(Int(sliderCnt.value))")
         }
 
+    }
+    @IBAction func bestImageSlider(sender: UISwitch) {
+        let defaults = NSUserDefaults.standardUserDefaults()
+        if bestImageSlider.on {
+            defaults.setBool(bestImageSlider.on, forKey: "BmsSetting")
+        } else {
+            defaults.setBool(false, forKey: "BmsSetting")
+        }
     }
     
     @IBAction func sliderChanged(sender: AnyObject) {
@@ -73,7 +84,7 @@ class SettingTVC: UITableViewController, MFMailComposeViewControllerDelegate {
         mailComposeVC.mailComposeDelegate = self
         mailComposeVC.setToRecipients(["admin@testingground.xyz"])
         mailComposeVC.setSubject("App Review")
-        mailComposeVC.setMessageBody("Hi Prateek, \n\nI would like to share feedback...\n\n (Running on \(modelName))", isHTML: false)
+        mailComposeVC.setMessageBody("Hi Prateek, \n\nI would like to share feedback...\n\n (Running on \(modelName) with iOS \(systemVersion))", isHTML: false)
         return mailComposeVC
     }
     func mailAlert() {

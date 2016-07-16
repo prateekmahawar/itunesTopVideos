@@ -19,6 +19,8 @@ let NOACCESS = "No Internet Access"
 
 let WWAN = "Cellular Access Available"
 
+var systemVersion = UIDevice.currentDevice().systemVersion
+
 public extension UIDevice {
     
     var modelName: String {

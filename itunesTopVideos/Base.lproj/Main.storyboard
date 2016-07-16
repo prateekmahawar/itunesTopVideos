@@ -217,6 +217,9 @@
                                                 </label>
                                                 <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Lcr-LM-Cc1">
                                                     <rect key="frame" x="535" y="31" width="51" height="31"/>
+                                                    <connections>
+                                                        <action selector="bestImageSlider:" destination="nPL-23-027" eventType="valueChanged" id="2QK-gw-aj8"/>
+                                                    </connections>
                                                 </switch>
                                             </subviews>
                                             <constraints>
@@ -312,6 +315,7 @@
                         <outlet property="aboutDisplay" destination="2sN-37-baa" id="bBe-LN-eXb"/>
                         <outlet property="apiCount" destination="9dy-Xo-86J" id="NDf-k2-bvM"/>
                         <outlet property="bestImageDisplay" destination="wAB-Lz-C64" id="C8Q-wH-BcA"/>
+                        <outlet property="bestImageSlider" destination="Lcr-LM-Cc1" id="QM8-Os-cvL"/>
                         <outlet property="feedbackDisplay" destination="TBO-7G-BVB" id="hzy-Tp-xQu"/>
                         <outlet property="securityDisplay" destination="Tut-io-fZW" id="h7j-Dp-ZRh"/>
                         <outlet property="sliderCnt" destination="pSH-Yw-4Bl" id="zaK-3u-Yla"/>
