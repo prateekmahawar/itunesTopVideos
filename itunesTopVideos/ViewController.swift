@@ -8,11 +8,16 @@
 
 import UIKit
 
-class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate {
+class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate,UISearchResultsUpdating {
 
     @IBOutlet weak var tableView: UITableView!
     
         var videos = [Videos]()
+        //Search Start
+        var filterSearch = [Videos]()
+        let resultsSearchController = UISearchController(searchResultsController: nil)
+        //Search Finish
+    
         var limit = 10
     
     override func viewDidLoad() {
@@ -39,12 +44,20 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
         return 1
     }
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return videos.count
+        if resultsSearchController.active{
+            return filterSearch.count
+        } else {
+            return videos.count
+        }
     }
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCellWithIdentifier(storyBoard.cellReuseIdentifier, forIndexPath: indexPath) as?  MusicVideoCell{
-        cell.video = videos[indexPath.row]
-            return cell
+            if resultsSearchController.active {
+                cell.video = filterSearch[indexPath.row]
+            } else {
+                cell.video = videos[indexPath.row]
+            }
+                return cell
         }
         else {
             return MusicVideoCell()
@@ -63,6 +76,18 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
         //        }
         
         self.videos = result
+        
+        //Search Start
+        resultsSearchController.searchResultsUpdater = self
+        definesPresentationContext = true
+        resultsSearchController.dimsBackgroundDuringPresentation = false //Selection Doesn't Work MOST IMPORTANT
+        resultsSearchController.searchBar.placeholder = "Search Here"
+        resultsSearchController.searchBar.searchBarStyle = UISearchBarStyle.Prominent //Don't Need it necessarily
+        
+        tableView.tableHeaderView = resultsSearchController.searchBar
+        
+        //Saerch Finish
+        
         tableView.reloadData()
         
     }
@@ -132,14 +157,36 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == storyBoard.segueIdentifier {
             if let indexPath = tableView.indexPathForSelectedRow {
-                let video = videos[indexPath.row]
+                let video: Videos
+                if resultsSearchController.active{
+                     video = filterSearch[indexPath.row]
+                
+                } else {
+                     video = videos[indexPath.row]
+                
+                }
                 let dVC = segue.destinationViewController as? DetailVC
                 dVC!.videos = video
-                
                 
             }
         }
     }
+    
+    //Search LOGIC
+    func updateSearchResultsForSearchController(searchController: UISearchController) {
+        searchController.searchBar.text!.lowercaseString
+        filterSearch(searchController.searchBar.text!)
+    }
+    
+    func filterSearch(searchText:String) {
+        filterSearch = videos.filter { videos in
+            return videos.vArtist.lowercaseString.containsString(searchText.lowercaseString)
+        }
+        tableView.reloadData()
+    }
+    
+    
+    //UIRefreshControl
     lazy var refreshControl: UIRefreshControl = {
         let refreshControl = UIRefreshControl()
         refreshControl.addTarget(self, action: #selector(ViewController.handleRefresh(_:)), forControlEvents: UIControlEvents.ValueChanged)
@@ -148,9 +195,12 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
     }()
     func handleRefresh(refreshControl: UIRefreshControl) {
        
+        if resultsSearchController.active {
+            refreshControl.endRefreshing()
+        } else {
         self.tableView.reloadData()
         refreshControl.endRefreshing()
-        runAPI()
+            runAPI()}
         
     }
 //    override func viewWillAppear(animated: Bool) {
