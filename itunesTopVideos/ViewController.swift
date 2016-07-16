@@ -180,8 +180,9 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
     
     func filterSearch(searchText:String) {
         filterSearch = videos.filter { videos in
-            return videos.vArtist.lowercaseString.containsString(searchText.lowercaseString)
+            return videos.vArtist.lowercaseString.containsString(searchText.lowercaseString) || videos.vName .lowercaseString.containsString(searchText.lowercaseString) || "\(videos.vRank)".lowercaseString.containsString(searchText.lowercaseString)
         }
+        
         tableView.reloadData()
     }
     
