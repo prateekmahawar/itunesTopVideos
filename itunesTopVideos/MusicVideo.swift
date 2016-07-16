@@ -106,7 +106,10 @@ class Videos {
         
         if let Price = data["im:price"] as? JSONDictionary,
             vPrice = Price["label"] as? String {
-            self._vPrice = vPrice
+            if vPrice == "Get"{
+                self._vPrice = "$2.99" } else {
+                self._vPrice = vPrice
+            }
         } else {
             self._vPrice = ""
         }

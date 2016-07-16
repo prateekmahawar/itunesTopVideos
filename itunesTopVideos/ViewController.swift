@@ -13,6 +13,7 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
     @IBOutlet weak var tableView: UITableView!
     
         var videos = [Videos]()
+        var limit = 10
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,6 +21,9 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
         self.automaticallyAdjustsScrollViewInsets = false
         tableView.dataSource = self
         tableView.delegate = self
+        
+        self.tableView.addSubview(self.refreshControl)
+        title = ("The iTunes Top \(limit) Music Videos")
         
         NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(ViewController.reachabilityStatusChanged) , name: "ReachStatusChanged", object: nil)
         
@@ -104,9 +108,20 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
         
     }
     
+    func getAPICount(){
+        if (NSUserDefaults.standardUserDefaults().objectForKey("APICNT") != nil) {
+            let theValue = NSUserDefaults.standardUserDefaults().objectForKey("APICNT") as! Int
+            limit = theValue
+        }
+        
+        
+    }
+    
     func runAPI() {
+        getAPICount()
         let api = APIManager()
-        api.loadData("https://itunes.apple.com/us/rss/topmusicvideos/limit=100/json", completion: didLoadData)
+        api.loadData("https://itunes.apple.com/us/rss/topmusicvideos/limit=\(limit)/json", completion: didLoadData)
+        self.title = ("The iTunes Top \(limit) Music Videos")
     }
     
    deinit
@@ -125,8 +140,22 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
             }
         }
     }
-    
-    
+    lazy var refreshControl: UIRefreshControl = {
+        let refreshControl = UIRefreshControl()
+        refreshControl.addTarget(self, action: #selector(ViewController.handleRefresh(_:)), forControlEvents: UIControlEvents.ValueChanged)
+        
+        return refreshControl
+    }()
+    func handleRefresh(refreshControl: UIRefreshControl) {
+       
+        self.tableView.reloadData()
+        refreshControl.endRefreshing()
+        runAPI()
+        
+    }
+//    override func viewWillAppear(animated: Bool) {
+//        runAPI()
+//    }
     
 }
 
