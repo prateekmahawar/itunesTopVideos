@@ -57,6 +57,23 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
             } else {
                 cell.video = videos[indexPath.row]
             }
+            
+            //Add Shadow
+            let shadowPath2: UIBezierPath = UIBezierPath(rect: cell.bounds)
+            cell.layer.masksToBounds = false
+            cell.layer.shadowColor = UIColor.blackColor().CGColor
+            cell.layer.shadowOffset = CGSizeMake(0.0, 5.0)
+            cell.layer.shadowOpacity = 0.5
+            cell.layer.shadowPath = shadowPath2.CGPath
+
+            
+            //Add Separator
+//            let separatorLineView: UIView = UIView(frame: CGRectMake(0, 0, 400, 3))
+//
+//            separatorLineView.backgroundColor = UIColor.whiteColor()
+//            
+//            cell.contentView.addSubview(separatorLineView)
+
                 return cell
         }
         else {

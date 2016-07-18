@@ -76,7 +76,7 @@
                                                 <constraint firstItem="NOQ-Pv-QNq" firstAttribute="bottom" secondItem="ygw-la-pzF" secondAttribute="bottomMargin" id="wU5-0k-kJP"/>
                                             </constraints>
                                         </tableViewCellContentView>
-                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <connections>
                                             <outlet property="noNameLbl" destination="LCw-Pa-NQX" id="KWj-Ff-lfi"/>
                                             <outlet property="songNameLbl" destination="DQq-0V-8lZ" id="l2O-H8-mVm"/>
