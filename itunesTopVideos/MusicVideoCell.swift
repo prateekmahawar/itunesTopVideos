@@ -10,6 +10,7 @@ import UIKit
 
 class MusicVideoCell: UITableViewCell {
     
+    
     var video : Videos! {
         didSet {
             updateCell()
@@ -28,7 +29,7 @@ class MusicVideoCell: UITableViewCell {
         
         noNameLbl.text = ("\(video.vRank) . \(video.vArtist)")
         songNameLbl.text = ("\(video.vName)")
-    
+        
         if video!.vImageData != nil {
             videoImg.image = UIImage(data: video!.vImageData!)
         } else {
@@ -36,6 +37,10 @@ class MusicVideoCell: UITableViewCell {
             getVideoImage(video!, imageView: videoImg)
         }
         
+    }
+    
+    func removeImage() {
+        videoImg.image = UIImage(named: "load")
     }
     
     func getVideoImage(video: Videos , imageView: UIImageView) {

@@ -78,10 +78,24 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
         }
         else {
             return MusicVideoCell()
+            
         }
         
     }
 
+    
+    func tableView(tableView: UITableView, didEndDisplayingCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
+        if let cell = tableView.dequeueReusableCellWithIdentifier(storyBoard.cellReuseIdentifier, forIndexPath: indexPath) as?  MusicVideoCell{
+            
+            cell.removeImage()
+//            if resultsSearchController.active {
+//                
+//                cell.video = filterSearch[indexPath.row]
+//            } else {
+//                cell.video = videos[indexPath.row]
+//            }
+//        
+        }}
     
     func didLoadData(result:[Videos]) {
 //                for item in videos {
