@@ -85,18 +85,22 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
 
     
     func tableView(tableView: UITableView, didEndDisplayingCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
-        if let cell = tableView.dequeueReusableCellWithIdentifier(storyBoard.cellReuseIdentifier, forIndexPath: indexPath) as?  MusicVideoCell{
-            
+        guard let cell = cell as? MusicVideoCell else { return }
+        
             cell.removeImage()
-//            if resultsSearchController.active {
-//                
-//                cell.video = filterSearch[indexPath.row]
-//            } else {
-//                cell.video = videos[indexPath.row]
-//            }
-//        
-        }}
-    
+        }
+    func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
+        guard let cell = cell as? MusicVideoCell else { return }
+        
+        let shadowPath2: UIBezierPath = UIBezierPath(rect: cell.bounds)
+        cell.layer.masksToBounds = false
+        cell.layer.shadowColor = UIColor.blackColor().CGColor
+        cell.layer.shadowOffset = CGSizeMake(0.0, 5.0)
+        cell.layer.shadowOpacity = 0.5
+        cell.layer.shadowPath = shadowPath2.CGPath
+
+        
+    }
     func didLoadData(result:[Videos]) {
 //                for item in videos {
 //                    print("Name Of Artist = \(item.vArtist)")
