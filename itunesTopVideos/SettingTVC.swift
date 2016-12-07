@@ -19,7 +19,7 @@ class SettingTVC: UITableViewController, MFMailComposeViewControllerDelegate {
     @IBOutlet weak var touchId: UISwitch!
     @IBOutlet weak var apiCount: UILabel!
     @IBOutlet weak var sliderCnt: UISlider!
-    let modelName = UIDevice.currentDevice().modelName
+    let modelName = UIDevice.current.modelName
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,12 +27,12 @@ class SettingTVC: UITableViewController, MFMailComposeViewControllerDelegate {
         tableView.alwaysBounceVertical = false
         
         
-        bestImageSlider.on = NSUserDefaults.standardUserDefaults().boolForKey("BmsSetting")
-        touchId.on = NSUserDefaults.standardUserDefaults().boolForKey("SecSetting")
-        if (NSUserDefaults.standardUserDefaults().objectForKey("APICNT") != nil)
+        bestImageSlider.isOn = UserDefaults.standard.bool(forKey: "BmsSetting")
+        touchId.isOn = UserDefaults.standard.bool(forKey: "SecSetting")
+        if (UserDefaults.standard.object(forKey: "APICNT") != nil)
         {
             
-            let theValue = NSUserDefaults.standardUserDefaults().objectForKey("APICNT") as! Int
+            let theValue = UserDefaults.standard.object(forKey: "APICNT") as! Int
             apiCount.text = "\(theValue)"
             sliderCnt.value = Float(theValue)
         } else {
@@ -41,40 +41,40 @@ class SettingTVC: UITableViewController, MFMailComposeViewControllerDelegate {
         }
 
     }
-    @IBAction func bestImageSlider(sender: UISwitch) {
-        let defaults = NSUserDefaults.standardUserDefaults()
-        if bestImageSlider.on {
-            defaults.setBool(bestImageSlider.on, forKey: "BmsSetting")
+    @IBAction func bestImageSlider(_ sender: UISwitch) {
+        let defaults = UserDefaults.standard
+        if bestImageSlider.isOn {
+            defaults.set(bestImageSlider.isOn, forKey: "BmsSetting")
         } else {
-            defaults.setBool(false, forKey: "BmsSetting")
+            defaults.set(false, forKey: "BmsSetting")
         }
     }
     
-    @IBAction func sliderChanged(sender: AnyObject) {
-        let defaults = NSUserDefaults.standardUserDefaults()
-        defaults.setObject(Int(sliderCnt.value), forKey: "APICNT")
+    @IBAction func sliderChanged(_ sender: AnyObject) {
+        let defaults = UserDefaults.standard
+        defaults.set(Int(sliderCnt.value), forKey: "APICNT")
         apiCount.text = ("\(Int(sliderCnt.value))")
     }
-    @IBAction func touchIDSec(sender: UISwitch) {
+    @IBAction func touchIDSec(_ sender: UISwitch) {
         
-        let defaults = NSUserDefaults.standardUserDefaults()
-        if touchId.on {
-            defaults.setBool(touchId.on, forKey: "SecSetting")
+        let defaults = UserDefaults.standard
+        if touchId.isOn {
+            defaults.set(touchId.isOn, forKey: "SecSetting")
         } else {
-            defaults.setBool(false, forKey: "SecSetting")
+            defaults.set(false, forKey: "SecSetting")
         }
         
     }
 
-    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if indexPath.row == 1{
             let mailComposeViewController = configureMail()
             if MFMailComposeViewController.canSendMail() {
-                self.presentViewController(mailComposeViewController, animated: true, completion: nil)
+                self.present(mailComposeViewController, animated: true, completion: nil)
             } else {
                 mailAlert()
             }
-            tableView.deselectRowAtIndexPath(indexPath, animated: true)
+            tableView.deselectRow(at: indexPath, animated: true)
         }
     }
     
@@ -88,29 +88,29 @@ class SettingTVC: UITableViewController, MFMailComposeViewControllerDelegate {
         return mailComposeVC
     }
     func mailAlert() {
-        let alertController: UIAlertController = UIAlertController(title: "Alert", message: "No e-Mail Account Set", preferredStyle: .Alert)
-        let okAction = UIAlertAction(title: "OK", style: .Default) {
+        let alertController: UIAlertController = UIAlertController(title: "Alert", message: "No e-Mail Account Set", preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "OK", style: .default) {
             action -> Void in
             //ADD ACTION
         }
         alertController.addAction(okAction)
-        presentViewController(alertController, animated: true, completion: nil)
+        present(alertController, animated: true, completion: nil)
     }
     
-    func mailComposeController(controller: MFMailComposeViewController, didFinishWithResult result: MFMailComposeResult, error: NSError?) {
+    func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
         switch result.rawValue{
-        case MFMailComposeResultCancelled.rawValue:
+        case MFMailComposeResult.cancelled.rawValue:
             print("Mail Cancelled")
-        case MFMailComposeResultSaved.rawValue:
+        case MFMailComposeResult.saved.rawValue:
             print("Mail Saved")
-        case MFMailComposeResultSent.rawValue:
+        case MFMailComposeResult.sent.rawValue:
             print("Mail Send")
-        case MFMailComposeResultFailed.rawValue:
+        case MFMailComposeResult.failed.rawValue:
             print("Mail Failed")
         default:
             print("Unknown Issue")
         }
-        self.dismissViewControllerAnimated(true, completion: nil)
+        self.dismiss(animated: true, completion: nil)
     }
     
 }

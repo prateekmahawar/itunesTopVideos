@@ -30,49 +30,49 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
         self.tableView.addSubview(self.refreshControl)
         title = ("The iTunes Top \(limit) Music Videos")
         
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(ViewController.reachabilityStatusChanged) , name: "ReachStatusChanged", object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(ViewController.reachabilityStatusChanged) , name: NSNotification.Name(rawValue: "ReachStatusChanged"), object: nil)
         
         reachabilityStatusChanged()
         
     }
-    private struct storyBoard {
+    fileprivate struct storyBoard {
         static let cellReuseIdentifier = "cell"
         static let segueIdentifier = "musicDetail"
     }
     
-    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if resultsSearchController.active{
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if resultsSearchController.isActive{
             return filterSearch.count
         } else {
             return videos.count
         }
     }
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        if let cell = tableView.dequeueReusableCellWithIdentifier(storyBoard.cellReuseIdentifier, forIndexPath: indexPath) as?  MusicVideoCell{
-            if resultsSearchController.active {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        if let cell = tableView.dequeueReusableCell(withIdentifier: storyBoard.cellReuseIdentifier, for: indexPath) as?  MusicVideoCell{
+            if resultsSearchController.isActive {
                 cell.video = filterSearch[indexPath.row]
             } else {
                 cell.video = videos[indexPath.row]
             }
             
             //Add Shadow
-            let shadowPath2: UIBezierPath = UIBezierPath(rect: cell.bounds)
-            cell.layer.masksToBounds = false
-            cell.layer.shadowColor = UIColor.blackColor().CGColor
-            cell.layer.shadowOffset = CGSizeMake(0.0, 5.0)
-            cell.layer.shadowOpacity = 0.5
-            cell.layer.shadowPath = shadowPath2.CGPath
+//            let shadowPath2: UIBezierPath = UIBezierPath(rect: cell.bounds)
+//            cell.layer.masksToBounds = false
+//            cell.layer.shadowColor = UIColor.blackColor().CGColor
+//            cell.layer.shadowOffset = CGSizeMake(0.0, 5.0)
+//            cell.layer.shadowOpacity = 0.5
+//            cell.layer.shadowPath = shadowPath2.CGPath
 
             
             //Add Separator
-//            let separatorLineView: UIView = UIView(frame: CGRectMake(0, 0, 400, 3))
-//
-//            separatorLineView.backgroundColor = UIColor.whiteColor()
-//            
-//            cell.contentView.addSubview(separatorLineView)
+            let separatorLineView: UIView = UIView(frame: CGRect(x: 0, y: 0, width: 400, height: 3))
+
+            separatorLineView.backgroundColor = UIColor.white
+            
+            cell.contentView.addSubview(separatorLineView)
 
                 return cell
         }
@@ -84,24 +84,14 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
     }
 
     
-    func tableView(tableView: UITableView, didEndDisplayingCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
+    func tableView(_ tableView: UITableView, didEndDisplaying cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         guard let cell = cell as? MusicVideoCell else { return }
         
             cell.removeImage()
         }
-    func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
-        guard let cell = cell as? MusicVideoCell else { return }
-        
-        let shadowPath2: UIBezierPath = UIBezierPath(rect: cell.bounds)
-        cell.layer.masksToBounds = false
-        cell.layer.shadowColor = UIColor.blackColor().CGColor
-        cell.layer.shadowOffset = CGSizeMake(0.0, 5.0)
-        cell.layer.shadowOpacity = 0.5
-        cell.layer.shadowPath = shadowPath2.CGPath
+    
 
-        
-    }
-    func didLoadData(result:[Videos]) {
+    func didLoadData(_ result:[Videos]) {
 //                for item in videos {
 //                    print("Name Of Artist = \(item.vArtist)")
 //                }
@@ -117,7 +107,7 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
         definesPresentationContext = true
         resultsSearchController.dimsBackgroundDuringPresentation = false //Selection Doesn't Work MOST IMPORTANT
         resultsSearchController.searchBar.placeholder = "Search Here"
-        resultsSearchController.searchBar.searchBarStyle = UISearchBarStyle.Prominent //Don't Need it necessarily
+        resultsSearchController.searchBar.searchBarStyle = UISearchBarStyle.prominent //Don't Need it necessarily
         
         tableView.tableHeaderView = resultsSearchController.searchBar
         
@@ -131,10 +121,10 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
         case NOACCESS:
             //view.backgroundColor = UIColor.redColor()
             //Move Back to main Queue
-            dispatch_async(dispatch_get_main_queue()){
-            let alert = UIAlertController(title: "No Internet Access", message: "Please Make sure", preferredStyle: .Alert)
+            DispatchQueue.main.async{
+            let alert = UIAlertController(title: "No Internet Access", message: "Please Make sure internet is available", preferredStyle: .alert)
             
-            let cancelAction = UIAlertAction(title: "Cancel", style: .Default) {
+            let cancelAction = UIAlertAction(title: "Cancel", style: .default) {
              action -> () in
                 //Perfrom Actions
                 print("Cancel")
@@ -143,7 +133,7 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
 //                action -> () in
 //                print("Delete")
 //            }
-            let OkAction = UIAlertAction(title: "OK", style: .Default) {
+            let OkAction = UIAlertAction(title: "OK", style: .default) {
                 action -> () in
                 print("OK")
             }
@@ -151,7 +141,7 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
         alert.addAction(OkAction)
         alert.addAction(cancelAction)
      //   alert.addAction(deleteAction)
-        self.presentViewController(alert, animated: true, completion: nil)
+        self.present(alert, animated: true, completion: nil)
             }
         default:
             //view.backgroundColor = UIColor.greenColor()
@@ -169,8 +159,8 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
     }
     
     func getAPICount(){
-        if (NSUserDefaults.standardUserDefaults().objectForKey("APICNT") != nil) {
-            let theValue = NSUserDefaults.standardUserDefaults().objectForKey("APICNT") as! Int
+        if (UserDefaults.standard.object(forKey: "APICNT") != nil) {
+            let theValue = UserDefaults.standard.object(forKey: "APICNT") as! Int
             limit = theValue
         }
         
@@ -186,21 +176,21 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
     
    deinit
    {
-    NSNotificationCenter.defaultCenter().removeObserver(self, name: "ReachStatusChanged", object: nil)
+    NotificationCenter.default.removeObserver(self, name: NSNotification.Name(rawValue: "ReachStatusChanged"), object: nil)
     }
     
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == storyBoard.segueIdentifier {
             if let indexPath = tableView.indexPathForSelectedRow {
                 let video: Videos
-                if resultsSearchController.active{
+                if resultsSearchController.isActive{
                      video = filterSearch[indexPath.row]
                 
                 } else {
                      video = videos[indexPath.row]
                 
                 }
-                let dVC = segue.destinationViewController as? DetailVC
+                let dVC = segue.destination as? DetailVC
                 dVC!.videos = video
                 
             }
@@ -208,14 +198,14 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
     }
     
     //Search LOGIC
-    func updateSearchResultsForSearchController(searchController: UISearchController) {
-        searchController.searchBar.text!.lowercaseString
+    func updateSearchResults(for searchController: UISearchController) {
+        searchController.searchBar.text!.lowercased()
         filterSearch(searchController.searchBar.text!)
     }
     
-    func filterSearch(searchText:String) {
+    func filterSearch(_ searchText:String) {
         filterSearch = videos.filter { videos in
-            return videos.vArtist.lowercaseString.containsString(searchText.lowercaseString) || videos.vName .lowercaseString.containsString(searchText.lowercaseString) || "\(videos.vRank)".lowercaseString.containsString(searchText.lowercaseString)
+            return videos.vArtist.lowercased().contains(searchText.lowercased()) || videos.vName.lowercased().contains(searchText.lowercased()) || "\(videos.vRank)".lowercased().contains(searchText.lowercased())
         }
         
         tableView.reloadData()
@@ -225,13 +215,13 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
     //UIRefreshControl
     lazy var refreshControl: UIRefreshControl = {
         let refreshControl = UIRefreshControl()
-        refreshControl.addTarget(self, action: #selector(ViewController.handleRefresh(_:)), forControlEvents: UIControlEvents.ValueChanged)
+        refreshControl.addTarget(self, action: #selector(ViewController.handleRefresh(_:)), for: UIControlEvents.valueChanged)
         
         return refreshControl
     }()
-    func handleRefresh(refreshControl: UIRefreshControl) {
+    func handleRefresh(_ refreshControl: UIRefreshControl) {
        
-        if resultsSearchController.active {
+        if resultsSearchController.isActive {
             refreshControl.endRefreshing()
         } else {
         self.tableView.reloadData()

@@ -19,7 +19,7 @@ let NOACCESS = "No Internet Access"
 
 let WWAN = "Cellular Access Available"
 
-var systemVersion = UIDevice.currentDevice().systemVersion
+var systemVersion = UIDevice.current.systemVersion
 
 public extension UIDevice {
     
@@ -28,7 +28,7 @@ public extension UIDevice {
         uname(&systemInfo)
         let machineMirror = Mirror(reflecting: systemInfo.machine)
         let identifier = machineMirror.children.reduce("") { identifier, element in
-            guard let value = element.value as? Int8 where value != 0 else { return identifier }
+            guard let value = element.value as? Int8, value != 0 else { return identifier }
             return identifier + String(UnicodeScalar(UInt8(value)))
         }
         
@@ -144,7 +144,7 @@ public extension UIDevice {
  override func viewDidLoad() {
  super.viewDidLoad()
  
- //indicator = ProgressIndicator(inview: self.view,messsage: "Hello from Nepal..")
+ //indicator = ProgressIndicator(inview: self.view,messsage: "Hello from India..")
  //self.view.addSubview(indicator!)
  //OR
  indicator = ProgressIndicator(inview:self.view,loadingViewColor: UIColor.grayColor(), indicatorColor: UIColor.blackColor(), msg: "Landing within minutes,Please hold tight..")

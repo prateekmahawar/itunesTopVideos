@@ -14,19 +14,19 @@ class Videos {
     var lablImage :String
     
     
-    private var _vName : String
-    private var _vRights : String
-    private var _vPrice : String
-    private var _vImageUrl : String
-    private var _vArtist : String
-    private var _vVideoUrl : String
-    private var _vImid : String
-    private var _vGenre : String
-    private var _vLinkToItunes : String
-    private var _vReleaseDate : String
+    fileprivate var _vName : String
+    fileprivate var _vRights : String
+    fileprivate var _vPrice : String
+    fileprivate var _vImageUrl : String
+    fileprivate var _vArtist : String
+    fileprivate var _vVideoUrl : String
+    fileprivate var _vImid : String
+    fileprivate var _vGenre : String
+    fileprivate var _vLinkToItunes : String
+    fileprivate var _vReleaseDate : String
     
     
-    var vImageData:NSData?
+    var vImageData:Data?
     
   
     var vName: String {
@@ -72,25 +72,25 @@ class Videos {
     init (data:JSONDictionary) {
         
         if let name = data["im:name"] as? JSONDictionary,
-            vName = name["label"] as? String {
+            let vName = name["label"] as? String {
             self._vName = vName
         } else {
             _vName = ""
         }
         
         if let img = data["im:image"] as? JSONArray,
-            image = img[2] as? JSONDictionary,
-            immage = image["label"] as? String {
-            _vImageUrl = immage.stringByReplacingOccurrencesOfString("100x100", withString: "600x600")
+            let image = img[2] as? JSONDictionary,
+            let immage = image["label"] as? String {
+            _vImageUrl = immage.replacingOccurrences(of: "100x100", with: "600x600")
         } else {
             _vImageUrl = ""
         }
         
         
         if let video = data["link"] as? JSONArray,
-            vUrl = video[1] as? JSONDictionary,
-            vHref = vUrl["attributes"] as? JSONDictionary,
-            vVideoUrl = vHref["href"] as? String
+            let vUrl = video[1] as? JSONDictionary,
+            let vHref = vUrl["attributes"] as? JSONDictionary,
+            let vVideoUrl = vHref["href"] as? String
         {
             self._vVideoUrl = vVideoUrl
         } else {
@@ -98,14 +98,14 @@ class Videos {
         }
         
         if let Rights = data["rights"] as? JSONDictionary,
-            vRights = Rights["label"] as? String {
+            let vRights = Rights["label"] as? String {
             self._vRights = vRights
         } else {
             self._vRights = ""
         }
         
         if let Price = data["im:price"] as? JSONDictionary,
-            vPrice = Price["label"] as? String {
+            let vPrice = Price["label"] as? String {
             if vPrice == "Get"{
                 self._vPrice = "$2.99" } else {
                 self._vPrice = vPrice
@@ -115,32 +115,32 @@ class Videos {
         }
         
         if let Artist = data["im:artist"] as? JSONDictionary,
-            vArtist = Artist["label"] as? String {
+            let vArtist = Artist["label"] as? String {
             self._vArtist = vArtist
         } else {
             self._vArtist = ""
         }
         
         if let Imid = data["id"] as? JSONDictionary,
-            vid = Imid["attributes"] as? JSONDictionary,
-            vImid = vid["im:id"] as? String {
+            let vid = Imid["attributes"] as? JSONDictionary,
+            let vImid = vid["im:id"] as? String {
             self._vImid = vImid
         } else {
             self._vImid = ""
         }
         
         if let Genre = data["category"] as? JSONDictionary,
-            genree = Genre["attributes"] as? JSONDictionary,
-            vGenre = genree["term"] as? String {
+            let genree = Genre["attributes"] as? JSONDictionary,
+            let vGenre = genree["term"] as? String {
             self._vGenre = vGenre
         } else {
             self._vGenre = ""
         }
         
         if let link = data["link"] as? JSONArray,
-            linkk = link[0] as? JSONDictionary,
-            linkkk = linkk["attributes"] as? JSONDictionary,
-            vLinkToItunes = linkkk["href"] as? String {
+            let linkk = link[0] as? JSONDictionary,
+            let linkkk = linkk["attributes"] as? JSONDictionary,
+            let vLinkToItunes = linkkk["href"] as? String {
             self._vLinkToItunes = vLinkToItunes
         } else {
             self._vLinkToItunes = ""
@@ -155,8 +155,8 @@ class Videos {
         }
         
         if let img = data["im:image"] as? JSONArray,
-            image = img[2] as? JSONDictionary,
-            immage = image["label"] as? String {
+            let image = img[2] as? JSONDictionary,
+            let immage = image["label"] as? String {
             lablImage = immage
         } else {
             lablImage = ""

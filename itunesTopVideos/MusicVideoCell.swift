@@ -24,14 +24,14 @@ class MusicVideoCell: UITableViewCell {
     
     func updateCell(){
 //        videoImg.image = UIImage(named: "1")
-        noNameLbl.font = UIFont.preferredFontForTextStyle(UIFontTextStyleSubheadline)
-        songNameLbl.font = UIFont.preferredFontForTextStyle(UIFontTextStyleSubheadline)
+        noNameLbl.font = UIFont.preferredFont(forTextStyle: UIFontTextStyle.subheadline)
+        songNameLbl.font = UIFont.preferredFont(forTextStyle: UIFontTextStyle.subheadline)
         
         noNameLbl.text = ("\(video.vRank) . \(video.vArtist)")
         songNameLbl.text = ("\(video.vName)")
         
         if video!.vImageData != nil {
-            videoImg.image = UIImage(data: video!.vImageData!)
+            videoImg.image = UIImage(data: video!.vImageData! as Data)
         } else {
             print("Get Image in background")
             getVideoImage(video!, imageView: videoImg)
@@ -43,9 +43,9 @@ class MusicVideoCell: UITableViewCell {
         videoImg.image = UIImage(named: "load")
     }
     
-    func getVideoImage(video: Videos , imageView: UIImageView) {
-        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)) {
-            let data = NSData(contentsOfURL: NSURL(string: video.vImageUrl)!)
+    func getVideoImage(_ video: Videos , imageView: UIImageView) {
+        DispatchQueue.global(priority: DispatchQueue.GlobalQueuePriority.default).async {
+            let data = try? Data(contentsOf: URL(string: video.vImageUrl)!)
             
             var image : UIImage?
             if data != nil {
@@ -53,7 +53,7 @@ class MusicVideoCell: UITableViewCell {
                 image = UIImage(data: data!)
             }
             
-            dispatch_async(dispatch_get_main_queue()) {
+            DispatchQueue.main.async {
         
             imageView.image = image
         
