@@ -30,35 +30,16 @@ class MusicVideoCell: UITableViewCell {
         noNameLbl.text = ("\(video.vRank) . \(video.vArtist)")
         songNameLbl.text = ("\(video.vName)")
         
-        if video!.vImageData != nil {
-            videoImg.image = UIImage(data: video!.vImageData! as Data)
-        } else {
-            print("Get Image in background")
-            getVideoImage(video!, imageView: videoImg)
-        }
+        
+        videoImg.image = UIImage(named: "1")
+        videoImg.downloadImageFrom(link: video.vImageUrl, contentMode: .scaleAspectFit)
+        videoImg.layer.masksToBounds = true
         
     }
     
     func removeImage() {
-        videoImg.image = UIImage(named: "load")
+        videoImg.image = UIImage(named: "1")
     }
     
-    func getVideoImage(_ video: Videos , imageView: UIImageView) {
-        DispatchQueue.global(priority: DispatchQueue.GlobalQueuePriority.default).async {
-            let data = try? Data(contentsOf: URL(string: video.vImageUrl)!)
-            
-            var image : UIImage?
-            if data != nil {
-                video.vImageData = data
-                image = UIImage(data: data!)
-            }
-            
-            DispatchQueue.main.async {
-        
-            imageView.image = image
-        
-            }
-        }
-    }
-    
+
 }

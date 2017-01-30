@@ -33,11 +33,10 @@ class DetailVC: UIViewController {
         vPrice.text = videos.vPrice
         vRights.text = videos.vRights
         vGenre.text = videos.vGenre
-        if videos.vImageData != nil {
-            videoImg.image = UIImage(data: videos.vImageData! as Data)
-        } else {
-            videoImg.image = UIImage(named: "1")
-        }
+        
+        videoImg.image = UIImage(named: "1")
+        videoImg.downloadImageFrom(link: videos.vImageUrl, contentMode: .scaleAspectFit)
+        videoImg.layer.masksToBounds = true
         
     }
     @IBAction func socialMedia(_ sender: UIBarButtonItem) {

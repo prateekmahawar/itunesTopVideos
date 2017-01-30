@@ -37,8 +37,8 @@ class APIManager {
                 let i = videos.count
         print("Itunes top \(i)")
         print (" ")
-        let priority = DispatchQueue.GlobalQueuePriority.default
-        DispatchQueue.global(priority: priority).async {
+//        let priority = DispatchQueue.GlobalQueuePriority.default
+        DispatchQueue.global(qos: DispatchQoS.QoSClass.default).async  {
             DispatchQueue.main.async {
                 completion(videos)
             }

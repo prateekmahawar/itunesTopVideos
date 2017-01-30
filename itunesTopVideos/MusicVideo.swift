@@ -34,7 +34,11 @@ class Videos {
     }
     
     var vImageUrl: String {
+        if _vImageUrl != nil {
         return _vImageUrl
+        } else {
+            return "https://media0.giphy.com/media/3oEjI6SIIHBdRxXI40/200_s.gif"
+        }
     }
     
     var vVideoUrl:String {
