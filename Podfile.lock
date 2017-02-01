@@ -1,0 +1,12 @@
+PODS:
+  - Nuke (4.1.2)
+
+DEPENDENCIES:
+  - Nuke (~> 4.0)
+
+SPEC CHECKSUMS:
+  Nuke: 7cfd2acdf90c36f66e6ea40795bac0d851a9afe0
+
+PODFILE CHECKSUM: 657007b7c8f0f77989e8abd29c97f7ad1ca9289e
+
+COCOAPODS: 1.0.1

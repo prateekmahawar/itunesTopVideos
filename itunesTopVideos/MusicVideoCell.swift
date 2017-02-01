@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Nuke
 
 class MusicVideoCell: UITableViewCell {
     
@@ -32,7 +33,15 @@ class MusicVideoCell: UITableViewCell {
         
         
         videoImg.image = UIImage(named: "1")
-        videoImg.downloadImageFrom(link: video.vImageUrl, contentMode: .scaleAspectFit)
+//        videoImg.downloadImageFrom(link: video.vImageUrl, contentMode: .scaleAspectFit)
+        let fileUrl = NSURL(string: video.vImageUrl)
+        var urlRequest = URLRequest(url: fileUrl as! URL)
+        urlRequest.cachePolicy = .reloadIgnoringLocalCacheData
+        urlRequest.timeoutInterval = 30
+        let request = Request(urlRequest: urlRequest)
+        Nuke.loadImage(with: request, into: videoImg)
+
+
         videoImg.layer.masksToBounds = true
         
     }

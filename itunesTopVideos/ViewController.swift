@@ -8,6 +8,7 @@
 
 import UIKit
 
+
 class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate,UISearchResultsUpdating {
 
     @IBOutlet weak var tableView: UITableView!
@@ -199,8 +200,8 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
     
     //Search LOGIC
     func updateSearchResults(for searchController: UISearchController) {
-        searchController.searchBar.text!.lowercased()
-        filterSearch(searchController.searchBar.text!)
+//        searchController.searchBar.text!.lowercased()
+        filterSearch(searchController.searchBar.text!.lowercased())
     }
     
     func filterSearch(_ searchText:String) {
