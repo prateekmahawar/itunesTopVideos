@@ -1,1692 +1,797 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
-<plist version="1.0">
-<dict>
-	<key>archiveVersion</key>
-	<string>1</string>
-	<key>classes</key>
-	<dict/>
-	<key>objectVersion</key>
-	<string>46</string>
-	<key>objects</key>
-	<dict>
-		<key>086303F7B1686893D51D1107</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>inputPaths</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXShellScriptBuildPhase</string>
-			<key>name</key>
-			<string>[CP] Check Pods Manifest.lock</string>
-			<key>outputPaths</key>
-			<array/>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-			<key>shellPath</key>
-			<string>/bin/sh</string>
-			<key>shellScript</key>
-			<string>diff "${PODS_ROOT}/../Podfile.lock" "${PODS_ROOT}/Manifest.lock" &gt; /dev/null
-if [[ $? != 0 ]] ; then
-    cat &lt;&lt; EOM
-error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.
-EOM
-    exit 1
-fi
-</string>
-			<key>showEnvVarsInLog</key>
-			<string>0</string>
-		</dict>
-		<key>2114F5B32C9A00C2995D5BA8</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>inputPaths</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXShellScriptBuildPhase</string>
-			<key>name</key>
-			<string>[CP] Embed Pods Frameworks</string>
-			<key>outputPaths</key>
-			<array/>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-			<key>shellPath</key>
-			<string>/bin/sh</string>
-			<key>shellScript</key>
-			<string>"${SRCROOT}/Pods/Target Support Files/Pods-itunesTopVideos/Pods-itunesTopVideos-frameworks.sh"
-</string>
-			<key>showEnvVarsInLog</key>
-			<string>0</string>
-		</dict>
-		<key>2646E47C53908272EE1E47D1</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>name</key>
-			<string>Pods-itunesTopVideosTests.release.xcconfig</string>
-			<key>path</key>
-			<string>Pods/Target Support Files/Pods-itunesTopVideosTests/Pods-itunesTopVideosTests.release.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>29207B036A7F48B223A8804A</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>name</key>
-			<string>Pods-itunesTopVideosUITests.release.xcconfig</string>
-			<key>path</key>
-			<string>Pods/Target Support Files/Pods-itunesTopVideosUITests/Pods-itunesTopVideosUITests.release.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>379F7453D22B02C670A80074</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>inputPaths</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXShellScriptBuildPhase</string>
-			<key>name</key>
-			<string>[CP] Copy Pods Resources</string>
-			<key>outputPaths</key>
-			<array/>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-			<key>shellPath</key>
-			<string>/bin/sh</string>
-			<key>shellScript</key>
-			<string>"${SRCROOT}/Pods/Target Support Files/Pods-itunesTopVideosUITests/Pods-itunesTopVideosUITests-resources.sh"
-</string>
-			<key>showEnvVarsInLog</key>
-			<string>0</string>
-		</dict>
-		<key>389C2F48F48F10B9B563524A</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>inputPaths</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXShellScriptBuildPhase</string>
-			<key>name</key>
-			<string>[CP] Check Pods Manifest.lock</string>
-			<key>outputPaths</key>
-			<array/>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-			<key>shellPath</key>
-			<string>/bin/sh</string>
-			<key>shellScript</key>
-			<string>diff "${PODS_ROOT}/../Podfile.lock" "${PODS_ROOT}/Manifest.lock" &gt; /dev/null
-if [[ $? != 0 ]] ; then
-    cat &lt;&lt; EOM
-error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.
-EOM
-    exit 1
-fi
-</string>
-			<key>showEnvVarsInLog</key>
-			<string>0</string>
-		</dict>
-		<key>39BAC0447B3FE319756747A4</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>name</key>
-			<string>Pods-itunesTopVideosUITests.debug.xcconfig</string>
-			<key>path</key>
-			<string>Pods/Target Support Files/Pods-itunesTopVideosUITests/Pods-itunesTopVideosUITests.debug.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>41DAF33E080953CE3B495D28</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>4CAFEE303CF876485D86A3CC</string>
-				<string>DEC93E05AF8480CB2EAA6570</string>
-				<string>B2F7603113A44240CD8BE768</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Frameworks</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>4303D4BADDA896006075E409</key>
-		<dict>
-			<key>fileRef</key>
-			<string>B2F7603113A44240CD8BE768</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>4CAFEE303CF876485D86A3CC</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>wrapper.framework</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>Pods_itunesTopVideos.framework</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>5F4383EE0E126AFFFDF0DC38</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>name</key>
-			<string>Pods-itunesTopVideos.release.xcconfig</string>
-			<key>path</key>
-			<string>Pods/Target Support Files/Pods-itunesTopVideos/Pods-itunesTopVideos.release.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>689E6A5DE0EEA878B9E888F7</key>
-		<dict>
-			<key>fileRef</key>
-			<string>DEC93E05AF8480CB2EAA6570</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>80B2ED7D4F8AB4B8A45E4197</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>B8DCDF224D2D035B6E63355A</string>
-				<string>5F4383EE0E126AFFFDF0DC38</string>
-				<string>DD8CB42218920601D54772F9</string>
-				<string>2646E47C53908272EE1E47D1</string>
-				<string>39BAC0447B3FE319756747A4</string>
-				<string>29207B036A7F48B223A8804A</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Pods</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>B2F7603113A44240CD8BE768</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>wrapper.framework</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>Pods_itunesTopVideosUITests.framework</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>B8DCDF224D2D035B6E63355A</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>name</key>
-			<string>Pods-itunesTopVideos.debug.xcconfig</string>
-			<key>path</key>
-			<string>Pods/Target Support Files/Pods-itunesTopVideos/Pods-itunesTopVideos.debug.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>C7525B601D352959003665F9</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>C7525B6B1D352959003665F9</string>
-				<string>C7525B801D352959003665F9</string>
-				<string>C7525B8B1D352959003665F9</string>
-				<string>C7525B6A1D352959003665F9</string>
-				<string>80B2ED7D4F8AB4B8A45E4197</string>
-				<string>41DAF33E080953CE3B495D28</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>C7525B611D352959003665F9</key>
-		<dict>
-			<key>attributes</key>
-			<dict>
-				<key>LastSwiftUpdateCheck</key>
-				<string>0730</string>
-				<key>LastUpgradeCheck</key>
-				<string>0810</string>
-				<key>ORGANIZATIONNAME</key>
-				<string>Prateek Mahawar</string>
-				<key>TargetAttributes</key>
-				<dict>
-					<key>C7525B681D352959003665F9</key>
-					<dict>
-						<key>CreatedOnToolsVersion</key>
-						<string>7.3.1</string>
-						<key>DevelopmentTeam</key>
-						<string>2QJCV27NGS</string>
-						<key>LastSwiftMigration</key>
-						<string>0810</string>
-					</dict>
-					<key>C7525B7C1D352959003665F9</key>
-					<dict>
-						<key>CreatedOnToolsVersion</key>
-						<string>7.3.1</string>
-						<key>DevelopmentTeam</key>
-						<string>2QJCV27NGS</string>
-						<key>LastSwiftMigration</key>
-						<string>0810</string>
-						<key>TestTargetID</key>
-						<string>C7525B681D352959003665F9</string>
-					</dict>
-					<key>C7525B871D352959003665F9</key>
-					<dict>
-						<key>CreatedOnToolsVersion</key>
-						<string>7.3.1</string>
-						<key>DevelopmentTeam</key>
-						<string>2QJCV27NGS</string>
-						<key>LastSwiftMigration</key>
-						<string>0810</string>
-						<key>TestTargetID</key>
-						<string>C7525B681D352959003665F9</string>
-					</dict>
-				</dict>
-			</dict>
-			<key>buildConfigurationList</key>
-			<string>C7525B641D352959003665F9</string>
-			<key>compatibilityVersion</key>
-			<string>Xcode 3.2</string>
-			<key>developmentRegion</key>
-			<string>English</string>
-			<key>hasScannedForEncodings</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXProject</string>
-			<key>knownRegions</key>
-			<array>
-				<string>en</string>
-				<string>Base</string>
-			</array>
-			<key>mainGroup</key>
-			<string>C7525B601D352959003665F9</string>
-			<key>productRefGroup</key>
-			<string>C7525B6A1D352959003665F9</string>
-			<key>projectDirPath</key>
-			<string></string>
-			<key>projectReferences</key>
-			<array/>
-			<key>projectRoot</key>
-			<string></string>
-			<key>targets</key>
-			<array>
-				<string>C7525B681D352959003665F9</string>
-				<string>C7525B7C1D352959003665F9</string>
-				<string>C7525B871D352959003665F9</string>
-			</array>
-		</dict>
-		<key>C7525B641D352959003665F9</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>C7525B8F1D352959003665F9</string>
-				<string>C7525B901D352959003665F9</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Release</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>C7525B651D352959003665F9</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>C7525B9F1D3531AD003665F9</string>
-				<string>C7525B6F1D352959003665F9</string>
-				<string>C788B2731D357BE400C5B34F</string>
-				<string>C7CFC98A1D39660700235DEF</string>
-				<string>C7525B6D1D352959003665F9</string>
-				<string>C75FFECA1D368C690086EE2F</string>
-				<string>C7761BCC1D393A3A007B6D1C</string>
-				<string>C788B2711D357B6700C5B34F</string>
-				<string>C7B89D611D38F69600CAF6F6</string>
-			</array>
-			<key>isa</key>
-			<string>PBXSourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>C7525B661D352959003665F9</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>CAF46F2934E0DF5C3E2542E3</string>
-			</array>
-			<key>isa</key>
-			<string>PBXFrameworksBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>C7525B671D352959003665F9</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>C7525B771D352959003665F9</string>
-				<string>C7525B741D352959003665F9</string>
-				<string>C7525B721D352959003665F9</string>
-			</array>
-			<key>isa</key>
-			<string>PBXResourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>C7525B681D352959003665F9</key>
-		<dict>
-			<key>buildConfigurationList</key>
-			<string>C7525B911D352959003665F9</string>
-			<key>buildPhases</key>
-			<array>
-				<string>086303F7B1686893D51D1107</string>
-				<string>C7525B651D352959003665F9</string>
-				<string>C7525B661D352959003665F9</string>
-				<string>C7525B671D352959003665F9</string>
-				<string>2114F5B32C9A00C2995D5BA8</string>
-				<string>D8C8DFDC1306A30BC59D3F70</string>
-			</array>
-			<key>buildRules</key>
-			<array/>
-			<key>dependencies</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXNativeTarget</string>
-			<key>name</key>
-			<string>itunesTopVideos</string>
-			<key>productName</key>
-			<string>itunesTopVideos</string>
-			<key>productReference</key>
-			<string>C7525B691D352959003665F9</string>
-			<key>productType</key>
-			<string>com.apple.product-type.application</string>
-		</dict>
-		<key>C7525B691D352959003665F9</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>wrapper.application</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>itunesTopVideos.app</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>C7525B6A1D352959003665F9</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>C7525B691D352959003665F9</string>
-				<string>C7525B7D1D352959003665F9</string>
-				<string>C7525B881D352959003665F9</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Products</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>C7525B6B1D352959003665F9</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>C75FFEC61D368BB90086EE2F</string>
-				<string>C788B26F1D357B4A00C5B34F</string>
-				<string>C7525B9D1D352C14003665F9</string>
-				<string>C7525B9C1D352BC5003665F9</string>
-				<string>C7525B9B1D352BBF003665F9</string>
-				<string>C7525B9A1D352BB8003665F9</string>
-				<string>C7525B6C1D352959003665F9</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>path</key>
-			<string>itunesTopVideos</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>C7525B6C1D352959003665F9</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>AppDelegate.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>C7525B6D1D352959003665F9</key>
-		<dict>
-			<key>fileRef</key>
-			<string>C7525B6C1D352959003665F9</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>C7525B6E1D352959003665F9</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>ViewController.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>C7525B6F1D352959003665F9</key>
-		<dict>
-			<key>fileRef</key>
-			<string>C7525B6E1D352959003665F9</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>C7525B701D352959003665F9</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>C7525B711D352959003665F9</string>
-			</array>
-			<key>isa</key>
-			<string>PBXVariantGroup</string>
-			<key>name</key>
-			<string>Main.storyboard</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>C7525B711D352959003665F9</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>file.storyboard</string>
-			<key>name</key>
-			<string>Base</string>
-			<key>path</key>
-			<string>Base.lproj/Main.storyboard</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>C7525B721D352959003665F9</key>
-		<dict>
-			<key>fileRef</key>
-			<string>C7525B701D352959003665F9</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>C7525B731D352959003665F9</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>folder.assetcatalog</string>
-			<key>path</key>
-			<string>Assets.xcassets</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>C7525B741D352959003665F9</key>
-		<dict>
-			<key>fileRef</key>
-			<string>C7525B731D352959003665F9</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>C7525B751D352959003665F9</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>C7525B761D352959003665F9</string>
-			</array>
-			<key>isa</key>
-			<string>PBXVariantGroup</string>
-			<key>name</key>
-			<string>LaunchScreen.storyboard</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>C7525B761D352959003665F9</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>file.storyboard</string>
-			<key>name</key>
-			<string>Base</string>
-			<key>path</key>
-			<string>Base.lproj/LaunchScreen.storyboard</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>C7525B771D352959003665F9</key>
-		<dict>
-			<key>fileRef</key>
-			<string>C7525B751D352959003665F9</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>C7525B781D352959003665F9</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.plist.xml</string>
-			<key>path</key>
-			<string>Info.plist</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>C7525B791D352959003665F9</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>C7525B821D352959003665F9</string>
-			</array>
-			<key>isa</key>
-			<string>PBXSourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>C7525B7A1D352959003665F9</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>689E6A5DE0EEA878B9E888F7</string>
-			</array>
-			<key>isa</key>
-			<string>PBXFrameworksBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>C7525B7B1D352959003665F9</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXResourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>C7525B7C1D352959003665F9</key>
-		<dict>
-			<key>buildConfigurationList</key>
-			<string>C7525B941D352959003665F9</string>
-			<key>buildPhases</key>
-			<array>
-				<string>D6ACBCB3F44A55A7FD25BA06</string>
-				<string>C7525B791D352959003665F9</string>
-				<string>C7525B7A1D352959003665F9</string>
-				<string>C7525B7B1D352959003665F9</string>
-				<string>FB2D976DEF5AF9C20EE83A16</string>
-				<string>C9BF1A56F5E914F09B038290</string>
-			</array>
-			<key>buildRules</key>
-			<array/>
-			<key>dependencies</key>
-			<array>
-				<string>C7525B7F1D352959003665F9</string>
-			</array>
-			<key>isa</key>
-			<string>PBXNativeTarget</string>
-			<key>name</key>
-			<string>itunesTopVideosTests</string>
-			<key>productName</key>
-			<string>itunesTopVideosTests</string>
-			<key>productReference</key>
-			<string>C7525B7D1D352959003665F9</string>
-			<key>productType</key>
-			<string>com.apple.product-type.bundle.unit-test</string>
-		</dict>
-		<key>C7525B7D1D352959003665F9</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>wrapper.cfbundle</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>itunesTopVideosTests.xctest</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>C7525B7E1D352959003665F9</key>
-		<dict>
-			<key>containerPortal</key>
-			<string>C7525B611D352959003665F9</string>
-			<key>isa</key>
-			<string>PBXContainerItemProxy</string>
-			<key>proxyType</key>
-			<string>1</string>
-			<key>remoteGlobalIDString</key>
-			<string>C7525B681D352959003665F9</string>
-			<key>remoteInfo</key>
-			<string>itunesTopVideos</string>
-		</dict>
-		<key>C7525B7F1D352959003665F9</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXTargetDependency</string>
-			<key>target</key>
-			<string>C7525B681D352959003665F9</string>
-			<key>targetProxy</key>
-			<string>C7525B7E1D352959003665F9</string>
-		</dict>
-		<key>C7525B801D352959003665F9</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>C7525B811D352959003665F9</string>
-				<string>C7525B831D352959003665F9</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>path</key>
-			<string>itunesTopVideosTests</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>C7525B811D352959003665F9</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>itunesTopVideosTests.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>C7525B821D352959003665F9</key>
-		<dict>
-			<key>fileRef</key>
-			<string>C7525B811D352959003665F9</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>C7525B831D352959003665F9</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.plist.xml</string>
-			<key>path</key>
-			<string>Info.plist</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>C7525B841D352959003665F9</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>C7525B8D1D352959003665F9</string>
-			</array>
-			<key>isa</key>
-			<string>PBXSourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>C7525B851D352959003665F9</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>4303D4BADDA896006075E409</string>
-			</array>
-			<key>isa</key>
-			<string>PBXFrameworksBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>C7525B861D352959003665F9</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXResourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>C7525B871D352959003665F9</key>
-		<dict>
-			<key>buildConfigurationList</key>
-			<string>C7525B971D352959003665F9</string>
-			<key>buildPhases</key>
-			<array>
-				<string>389C2F48F48F10B9B563524A</string>
-				<string>C7525B841D352959003665F9</string>
-				<string>C7525B851D352959003665F9</string>
-				<string>C7525B861D352959003665F9</string>
-				<string>379F7453D22B02C670A80074</string>
-			</array>
-			<key>buildRules</key>
-			<array/>
-			<key>dependencies</key>
-			<array>
-				<string>C7525B8A1D352959003665F9</string>
-			</array>
-			<key>isa</key>
-			<string>PBXNativeTarget</string>
-			<key>name</key>
-			<string>itunesTopVideosUITests</string>
-			<key>productName</key>
-			<string>itunesTopVideosUITests</string>
-			<key>productReference</key>
-			<string>C7525B881D352959003665F9</string>
-			<key>productType</key>
-			<string>com.apple.product-type.bundle.ui-testing</string>
-		</dict>
-		<key>C7525B881D352959003665F9</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>wrapper.cfbundle</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>itunesTopVideosUITests.xctest</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>C7525B891D352959003665F9</key>
-		<dict>
-			<key>containerPortal</key>
-			<string>C7525B611D352959003665F9</string>
-			<key>isa</key>
-			<string>PBXContainerItemProxy</string>
-			<key>proxyType</key>
-			<string>1</string>
-			<key>remoteGlobalIDString</key>
-			<string>C7525B681D352959003665F9</string>
-			<key>remoteInfo</key>
-			<string>itunesTopVideos</string>
-		</dict>
-		<key>C7525B8A1D352959003665F9</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXTargetDependency</string>
-			<key>target</key>
-			<string>C7525B681D352959003665F9</string>
-			<key>targetProxy</key>
-			<string>C7525B891D352959003665F9</string>
-		</dict>
-		<key>C7525B8B1D352959003665F9</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>C7525B8C1D352959003665F9</string>
-				<string>C7525B8E1D352959003665F9</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>path</key>
-			<string>itunesTopVideosUITests</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>C7525B8C1D352959003665F9</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>itunesTopVideosUITests.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>C7525B8D1D352959003665F9</key>
-		<dict>
-			<key>fileRef</key>
-			<string>C7525B8C1D352959003665F9</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>C7525B8E1D352959003665F9</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.plist.xml</string>
-			<key>path</key>
-			<string>Info.plist</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>C7525B8F1D352959003665F9</key>
-		<dict>
-			<key>buildSettings</key>
-			<dict>
-				<key>ALWAYS_SEARCH_USER_PATHS</key>
-				<string>NO</string>
-				<key>CLANG_ANALYZER_NONNULL</key>
-				<string>YES</string>
-				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
-				<string>gnu++0x</string>
-				<key>CLANG_CXX_LIBRARY</key>
-				<string>libc++</string>
-				<key>CLANG_ENABLE_MODULES</key>
-				<string>YES</string>
-				<key>CLANG_ENABLE_OBJC_ARC</key>
-				<string>YES</string>
-				<key>CLANG_WARN_BOOL_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_DIRECT_OBJC_ISA_USAGE</key>
-				<string>YES_ERROR</string>
-				<key>CLANG_WARN_EMPTY_BODY</key>
-				<string>YES</string>
-				<key>CLANG_WARN_ENUM_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_INFINITE_RECURSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_INT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_OBJC_ROOT_CLASS</key>
-				<string>YES_ERROR</string>
-				<key>CLANG_WARN_SUSPICIOUS_MOVE</key>
-				<string>YES</string>
-				<key>CLANG_WARN_UNREACHABLE_CODE</key>
-				<string>YES</string>
-				<key>CLANG_WARN__DUPLICATE_METHOD_MATCH</key>
-				<string>YES</string>
-				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
-				<string>iPhone Developer</string>
-				<key>COPY_PHASE_STRIP</key>
-				<string>NO</string>
-				<key>DEBUG_INFORMATION_FORMAT</key>
-				<string>dwarf</string>
-				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
-				<string>YES</string>
-				<key>ENABLE_TESTABILITY</key>
-				<string>YES</string>
-				<key>GCC_C_LANGUAGE_STANDARD</key>
-				<string>gnu99</string>
-				<key>GCC_DYNAMIC_NO_PIC</key>
-				<string>NO</string>
-				<key>GCC_NO_COMMON_BLOCKS</key>
-				<string>YES</string>
-				<key>GCC_OPTIMIZATION_LEVEL</key>
-				<string>0</string>
-				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
-				<array>
-					<string>DEBUG=1</string>
-					<string>$(inherited)</string>
-				</array>
-				<key>GCC_WARN_64_TO_32_BIT_CONVERSION</key>
-				<string>YES</string>
-				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
-				<string>YES_ERROR</string>
-				<key>GCC_WARN_UNDECLARED_SELECTOR</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
-				<string>YES_AGGRESSIVE</string>
-				<key>GCC_WARN_UNUSED_FUNCTION</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNUSED_VARIABLE</key>
-				<string>YES</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>9.3</string>
-				<key>MTL_ENABLE_DEBUG_INFO</key>
-				<string>YES</string>
-				<key>ONLY_ACTIVE_ARCH</key>
-				<string>YES</string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-				<key>SWIFT_OPTIMIZATION_LEVEL</key>
-				<string>-Onone</string>
-				<key>TARGETED_DEVICE_FAMILY</key>
-				<string>1,2</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>C7525B901D352959003665F9</key>
-		<dict>
-			<key>buildSettings</key>
-			<dict>
-				<key>ALWAYS_SEARCH_USER_PATHS</key>
-				<string>NO</string>
-				<key>CLANG_ANALYZER_NONNULL</key>
-				<string>YES</string>
-				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
-				<string>gnu++0x</string>
-				<key>CLANG_CXX_LIBRARY</key>
-				<string>libc++</string>
-				<key>CLANG_ENABLE_MODULES</key>
-				<string>YES</string>
-				<key>CLANG_ENABLE_OBJC_ARC</key>
-				<string>YES</string>
-				<key>CLANG_WARN_BOOL_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_DIRECT_OBJC_ISA_USAGE</key>
-				<string>YES_ERROR</string>
-				<key>CLANG_WARN_EMPTY_BODY</key>
-				<string>YES</string>
-				<key>CLANG_WARN_ENUM_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_INFINITE_RECURSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_INT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_OBJC_ROOT_CLASS</key>
-				<string>YES_ERROR</string>
-				<key>CLANG_WARN_SUSPICIOUS_MOVE</key>
-				<string>YES</string>
-				<key>CLANG_WARN_UNREACHABLE_CODE</key>
-				<string>YES</string>
-				<key>CLANG_WARN__DUPLICATE_METHOD_MATCH</key>
-				<string>YES</string>
-				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
-				<string>iPhone Developer</string>
-				<key>COPY_PHASE_STRIP</key>
-				<string>NO</string>
-				<key>DEBUG_INFORMATION_FORMAT</key>
-				<string>dwarf-with-dsym</string>
-				<key>ENABLE_NS_ASSERTIONS</key>
-				<string>NO</string>
-				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
-				<string>YES</string>
-				<key>GCC_C_LANGUAGE_STANDARD</key>
-				<string>gnu99</string>
-				<key>GCC_NO_COMMON_BLOCKS</key>
-				<string>YES</string>
-				<key>GCC_WARN_64_TO_32_BIT_CONVERSION</key>
-				<string>YES</string>
-				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
-				<string>YES_ERROR</string>
-				<key>GCC_WARN_UNDECLARED_SELECTOR</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
-				<string>YES_AGGRESSIVE</string>
-				<key>GCC_WARN_UNUSED_FUNCTION</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNUSED_VARIABLE</key>
-				<string>YES</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>9.3</string>
-				<key>MTL_ENABLE_DEBUG_INFO</key>
-				<string>NO</string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-				<key>SWIFT_OPTIMIZATION_LEVEL</key>
-				<string>-Owholemodule</string>
-				<key>TARGETED_DEVICE_FAMILY</key>
-				<string>1,2</string>
-				<key>VALIDATE_PRODUCT</key>
-				<string>YES</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>C7525B911D352959003665F9</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>C7525B921D352959003665F9</string>
-				<string>C7525B931D352959003665F9</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Release</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>C7525B921D352959003665F9</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>B8DCDF224D2D035B6E63355A</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>ASSETCATALOG_COMPILER_APPICON_NAME</key>
-				<string>AppIcon</string>
-				<key>CLANG_ENABLE_MODULES</key>
-				<string>YES</string>
-				<key>INFOPLIST_FILE</key>
-				<string>itunesTopVideos/Info.plist</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>9.0</string>
-				<key>LD_RUNPATH_SEARCH_PATHS</key>
-				<string>$(inherited) @executable_path/Frameworks</string>
-				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
-				<string>com.Prateek.itunesTopVideos</string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>SWIFT_OBJC_BRIDGING_HEADER</key>
-				<string>itunesTopVideos/itunesTopVideos-Bridging-Header.h</string>
-				<key>SWIFT_OPTIMIZATION_LEVEL</key>
-				<string>-Onone</string>
-				<key>SWIFT_VERSION</key>
-				<string>3.0</string>
-				<key>TARGETED_DEVICE_FAMILY</key>
-				<string>1,2</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>C7525B931D352959003665F9</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>5F4383EE0E126AFFFDF0DC38</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>ASSETCATALOG_COMPILER_APPICON_NAME</key>
-				<string>AppIcon</string>
-				<key>CLANG_ENABLE_MODULES</key>
-				<string>YES</string>
-				<key>INFOPLIST_FILE</key>
-				<string>itunesTopVideos/Info.plist</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>9.0</string>
-				<key>LD_RUNPATH_SEARCH_PATHS</key>
-				<string>$(inherited) @executable_path/Frameworks</string>
-				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
-				<string>com.Prateek.itunesTopVideos</string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>SWIFT_OBJC_BRIDGING_HEADER</key>
-				<string>itunesTopVideos/itunesTopVideos-Bridging-Header.h</string>
-				<key>SWIFT_VERSION</key>
-				<string>3.0</string>
-				<key>TARGETED_DEVICE_FAMILY</key>
-				<string>1,2</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>C7525B941D352959003665F9</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>C7525B951D352959003665F9</string>
-				<string>C7525B961D352959003665F9</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Release</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>C7525B951D352959003665F9</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>DD8CB42218920601D54772F9</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>BUNDLE_LOADER</key>
-				<string>$(TEST_HOST)</string>
-				<key>INFOPLIST_FILE</key>
-				<string>itunesTopVideosTests/Info.plist</string>
-				<key>LD_RUNPATH_SEARCH_PATHS</key>
-				<string>$(inherited) @executable_path/Frameworks @loader_path/Frameworks</string>
-				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
-				<string>com.Prateek.itunesTopVideosTests</string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>SWIFT_VERSION</key>
-				<string>3.0</string>
-				<key>TEST_HOST</key>
-				<string>$(BUILT_PRODUCTS_DIR)/itunesTopVideos.app/itunesTopVideos</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>C7525B961D352959003665F9</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>2646E47C53908272EE1E47D1</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>BUNDLE_LOADER</key>
-				<string>$(TEST_HOST)</string>
-				<key>INFOPLIST_FILE</key>
-				<string>itunesTopVideosTests/Info.plist</string>
-				<key>LD_RUNPATH_SEARCH_PATHS</key>
-				<string>$(inherited) @executable_path/Frameworks @loader_path/Frameworks</string>
-				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
-				<string>com.Prateek.itunesTopVideosTests</string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>SWIFT_VERSION</key>
-				<string>3.0</string>
-				<key>TEST_HOST</key>
-				<string>$(BUILT_PRODUCTS_DIR)/itunesTopVideos.app/itunesTopVideos</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>C7525B971D352959003665F9</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>C7525B981D352959003665F9</string>
-				<string>C7525B991D352959003665F9</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Release</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>C7525B981D352959003665F9</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>39BAC0447B3FE319756747A4</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>INFOPLIST_FILE</key>
-				<string>itunesTopVideosUITests/Info.plist</string>
-				<key>LD_RUNPATH_SEARCH_PATHS</key>
-				<string>$(inherited) @executable_path/Frameworks @loader_path/Frameworks</string>
-				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
-				<string>com.Prateek.itunesTopVideosUITests</string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>SWIFT_VERSION</key>
-				<string>3.0</string>
-				<key>TEST_TARGET_NAME</key>
-				<string>itunesTopVideos</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>C7525B991D352959003665F9</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>29207B036A7F48B223A8804A</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>INFOPLIST_FILE</key>
-				<string>itunesTopVideosUITests/Info.plist</string>
-				<key>LD_RUNPATH_SEARCH_PATHS</key>
-				<string>$(inherited) @executable_path/Frameworks @loader_path/Frameworks</string>
-				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
-				<string>com.Prateek.itunesTopVideosUITests</string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>SWIFT_VERSION</key>
-				<string>3.0</string>
-				<key>TEST_TARGET_NAME</key>
-				<string>itunesTopVideos</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>C7525B9A1D352BB8003665F9</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>C7525B6E1D352959003665F9</string>
-				<string>C7761BCB1D393A3A007B6D1C</string>
-				<string>C7CFC9891D39660700235DEF</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Controller</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>C7525B9B1D352BBF003665F9</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>C7B89D601D38F69600CAF6F6</string>
-				<string>C7525B701D352959003665F9</string>
-				<string>C7525B751D352959003665F9</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>View</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>C7525B9C1D352BC5003665F9</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>C7525B9E1D3531AD003665F9</string>
-				<string>C788B2721D357BE400C5B34F</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Model</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>C7525B9D1D352C14003665F9</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>C7525B731D352959003665F9</string>
-				<string>C7525B781D352959003665F9</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Supporting Files</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>C7525B9E1D3531AD003665F9</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>APIManager.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>C7525B9F1D3531AD003665F9</key>
-		<dict>
-			<key>fileRef</key>
-			<string>C7525B9E1D3531AD003665F9</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>C75FFEC61D368BB90086EE2F</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>C75FFEC81D368C690086EE2F</string>
-				<string>C75FFEC91D368C690086EE2F</string>
-				<string>C75FFEC71D368C680086EE2F</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Obj-C</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>C75FFEC71D368C680086EE2F</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>itunesTopVideos-Bridging-Header.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>C75FFEC81D368C690086EE2F</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>Reachability.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>C75FFEC91D368C690086EE2F</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>Reachability.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>C75FFECA1D368C690086EE2F</key>
-		<dict>
-			<key>fileRef</key>
-			<string>C75FFEC91D368C690086EE2F</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>C7761BCB1D393A3A007B6D1C</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>DetailVC.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>C7761BCC1D393A3A007B6D1C</key>
-		<dict>
-			<key>fileRef</key>
-			<string>C7761BCB1D393A3A007B6D1C</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>C788B26F1D357B4A00C5B34F</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>C788B2701D357B6700C5B34F</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Util</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>C788B2701D357B6700C5B34F</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>Constants.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>C788B2711D357B6700C5B34F</key>
-		<dict>
-			<key>fileRef</key>
-			<string>C788B2701D357B6700C5B34F</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>C788B2721D357BE400C5B34F</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>MusicVideo.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>C788B2731D357BE400C5B34F</key>
-		<dict>
-			<key>fileRef</key>
-			<string>C788B2721D357BE400C5B34F</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>C7B89D601D38F69600CAF6F6</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>MusicVideoCell.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>C7B89D611D38F69600CAF6F6</key>
-		<dict>
-			<key>fileRef</key>
-			<string>C7B89D601D38F69600CAF6F6</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>C7CFC9891D39660700235DEF</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>SettingTVC.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>C7CFC98A1D39660700235DEF</key>
-		<dict>
-			<key>fileRef</key>
-			<string>C7CFC9891D39660700235DEF</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>C9BF1A56F5E914F09B038290</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>inputPaths</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXShellScriptBuildPhase</string>
-			<key>name</key>
-			<string>[CP] Copy Pods Resources</string>
-			<key>outputPaths</key>
-			<array/>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-			<key>shellPath</key>
-			<string>/bin/sh</string>
-			<key>shellScript</key>
-			<string>"${SRCROOT}/Pods/Target Support Files/Pods-itunesTopVideosTests/Pods-itunesTopVideosTests-resources.sh"
-</string>
-			<key>showEnvVarsInLog</key>
-			<string>0</string>
-		</dict>
-		<key>CAF46F2934E0DF5C3E2542E3</key>
-		<dict>
-			<key>fileRef</key>
-			<string>4CAFEE303CF876485D86A3CC</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>D6ACBCB3F44A55A7FD25BA06</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>inputPaths</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXShellScriptBuildPhase</string>
-			<key>name</key>
-			<string>[CP] Check Pods Manifest.lock</string>
-			<key>outputPaths</key>
-			<array/>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-			<key>shellPath</key>
-			<string>/bin/sh</string>
-			<key>shellScript</key>
-			<string>diff "${PODS_ROOT}/../Podfile.lock" "${PODS_ROOT}/Manifest.lock" &gt; /dev/null
-if [[ $? != 0 ]] ; then
-    cat &lt;&lt; EOM
-error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.
-EOM
-    exit 1
-fi
-</string>
-			<key>showEnvVarsInLog</key>
-			<string>0</string>
-		</dict>
-		<key>D8C8DFDC1306A30BC59D3F70</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>inputPaths</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXShellScriptBuildPhase</string>
-			<key>name</key>
-			<string>[CP] Copy Pods Resources</string>
-			<key>outputPaths</key>
-			<array/>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-			<key>shellPath</key>
-			<string>/bin/sh</string>
-			<key>shellScript</key>
-			<string>"${SRCROOT}/Pods/Target Support Files/Pods-itunesTopVideos/Pods-itunesTopVideos-resources.sh"
-</string>
-			<key>showEnvVarsInLog</key>
-			<string>0</string>
-		</dict>
-		<key>DD8CB42218920601D54772F9</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>name</key>
-			<string>Pods-itunesTopVideosTests.debug.xcconfig</string>
-			<key>path</key>
-			<string>Pods/Target Support Files/Pods-itunesTopVideosTests/Pods-itunesTopVideosTests.debug.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>DEC93E05AF8480CB2EAA6570</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>wrapper.framework</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>Pods_itunesTopVideosTests.framework</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>FB2D976DEF5AF9C20EE83A16</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>inputPaths</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXShellScriptBuildPhase</string>
-			<key>name</key>
-			<string>[CP] Embed Pods Frameworks</string>
-			<key>outputPaths</key>
-			<array/>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-			<key>shellPath</key>
-			<string>/bin/sh</string>
-			<key>shellScript</key>
-			<string>"${SRCROOT}/Pods/Target Support Files/Pods-itunesTopVideosTests/Pods-itunesTopVideosTests-frameworks.sh"
-</string>
-			<key>showEnvVarsInLog</key>
-			<string>0</string>
-		</dict>
-	</dict>
-	<key>rootObject</key>
-	<string>C7525B611D352959003665F9</string>
-</dict>
-</plist>
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4303D4BADDA896006075E409 /* Pods_itunesTopVideosUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2F7603113A44240CD8BE768 /* Pods_itunesTopVideosUITests.framework */; };
+		689E6A5DE0EEA878B9E888F7 /* Pods_itunesTopVideosTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEC93E05AF8480CB2EAA6570 /* Pods_itunesTopVideosTests.framework */; };
+		C7525B6D1D352959003665F9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7525B6C1D352959003665F9 /* AppDelegate.swift */; };
+		C7525B6F1D352959003665F9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7525B6E1D352959003665F9 /* ViewController.swift */; };
+		C7525B721D352959003665F9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7525B701D352959003665F9 /* Main.storyboard */; };
+		C7525B741D352959003665F9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C7525B731D352959003665F9 /* Assets.xcassets */; };
+		C7525B771D352959003665F9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7525B751D352959003665F9 /* LaunchScreen.storyboard */; };
+		C7525B821D352959003665F9 /* itunesTopVideosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7525B811D352959003665F9 /* itunesTopVideosTests.swift */; };
+		C7525B8D1D352959003665F9 /* itunesTopVideosUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7525B8C1D352959003665F9 /* itunesTopVideosUITests.swift */; };
+		C7525B9F1D3531AD003665F9 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7525B9E1D3531AD003665F9 /* APIManager.swift */; };
+		C75FFECA1D368C690086EE2F /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = C75FFEC91D368C690086EE2F /* Reachability.m */; };
+		C7761BCC1D393A3A007B6D1C /* DetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7761BCB1D393A3A007B6D1C /* DetailVC.swift */; };
+		C788B2711D357B6700C5B34F /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C788B2701D357B6700C5B34F /* Constants.swift */; };
+		C788B2731D357BE400C5B34F /* MusicVideo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C788B2721D357BE400C5B34F /* MusicVideo.swift */; };
+		C7B89D611D38F69600CAF6F6 /* MusicVideoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B89D601D38F69600CAF6F6 /* MusicVideoCell.swift */; };
+		C7CFC98A1D39660700235DEF /* SettingTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7CFC9891D39660700235DEF /* SettingTVC.swift */; };
+		C7FEC6141E4B8C8E009892F6 /* ViewControllerUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7FEC6131E4B8C8E009892F6 /* ViewControllerUtils.swift */; };
+		CAF46F2934E0DF5C3E2542E3 /* Pods_itunesTopVideos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CAFEE303CF876485D86A3CC /* Pods_itunesTopVideos.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C7525B7E1D352959003665F9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C7525B611D352959003665F9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C7525B681D352959003665F9;
+			remoteInfo = itunesTopVideos;
+		};
+		C7525B891D352959003665F9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C7525B611D352959003665F9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C7525B681D352959003665F9;
+			remoteInfo = itunesTopVideos;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		2646E47C53908272EE1E47D1 /* Pods-itunesTopVideosTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-itunesTopVideosTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-itunesTopVideosTests/Pods-itunesTopVideosTests.release.xcconfig"; sourceTree = "<group>"; };
+		29207B036A7F48B223A8804A /* Pods-itunesTopVideosUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-itunesTopVideosUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-itunesTopVideosUITests/Pods-itunesTopVideosUITests.release.xcconfig"; sourceTree = "<group>"; };
+		39BAC0447B3FE319756747A4 /* Pods-itunesTopVideosUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-itunesTopVideosUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-itunesTopVideosUITests/Pods-itunesTopVideosUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		4CAFEE303CF876485D86A3CC /* Pods_itunesTopVideos.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_itunesTopVideos.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5F4383EE0E126AFFFDF0DC38 /* Pods-itunesTopVideos.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-itunesTopVideos.release.xcconfig"; path = "Pods/Target Support Files/Pods-itunesTopVideos/Pods-itunesTopVideos.release.xcconfig"; sourceTree = "<group>"; };
+		B2F7603113A44240CD8BE768 /* Pods_itunesTopVideosUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_itunesTopVideosUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B8DCDF224D2D035B6E63355A /* Pods-itunesTopVideos.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-itunesTopVideos.debug.xcconfig"; path = "Pods/Target Support Files/Pods-itunesTopVideos/Pods-itunesTopVideos.debug.xcconfig"; sourceTree = "<group>"; };
+		C7525B691D352959003665F9 /* itunesTopVideos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = itunesTopVideos.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C7525B6C1D352959003665F9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		C7525B6E1D352959003665F9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C7525B711D352959003665F9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C7525B731D352959003665F9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C7525B761D352959003665F9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		C7525B781D352959003665F9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C7525B7D1D352959003665F9 /* itunesTopVideosTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = itunesTopVideosTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C7525B811D352959003665F9 /* itunesTopVideosTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = itunesTopVideosTests.swift; sourceTree = "<group>"; };
+		C7525B831D352959003665F9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C7525B881D352959003665F9 /* itunesTopVideosUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = itunesTopVideosUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C7525B8C1D352959003665F9 /* itunesTopVideosUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = itunesTopVideosUITests.swift; sourceTree = "<group>"; };
+		C7525B8E1D352959003665F9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C7525B9E1D3531AD003665F9 /* APIManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
+		C75FFEC71D368C680086EE2F /* itunesTopVideos-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "itunesTopVideos-Bridging-Header.h"; sourceTree = "<group>"; };
+		C75FFEC81D368C690086EE2F /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		C75FFEC91D368C690086EE2F /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
+		C7761BCB1D393A3A007B6D1C /* DetailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailVC.swift; sourceTree = "<group>"; };
+		C788B2701D357B6700C5B34F /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		C788B2721D357BE400C5B34F /* MusicVideo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicVideo.swift; sourceTree = "<group>"; };
+		C7B89D601D38F69600CAF6F6 /* MusicVideoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicVideoCell.swift; sourceTree = "<group>"; };
+		C7CFC9891D39660700235DEF /* SettingTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingTVC.swift; sourceTree = "<group>"; };
+		C7FEC6131E4B8C8E009892F6 /* ViewControllerUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerUtils.swift; sourceTree = "<group>"; };
+		DD8CB42218920601D54772F9 /* Pods-itunesTopVideosTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-itunesTopVideosTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-itunesTopVideosTests/Pods-itunesTopVideosTests.debug.xcconfig"; sourceTree = "<group>"; };
+		DEC93E05AF8480CB2EAA6570 /* Pods_itunesTopVideosTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_itunesTopVideosTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C7525B661D352959003665F9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CAF46F2934E0DF5C3E2542E3 /* Pods_itunesTopVideos.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C7525B7A1D352959003665F9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				689E6A5DE0EEA878B9E888F7 /* Pods_itunesTopVideosTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C7525B851D352959003665F9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4303D4BADDA896006075E409 /* Pods_itunesTopVideosUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		41DAF33E080953CE3B495D28 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4CAFEE303CF876485D86A3CC /* Pods_itunesTopVideos.framework */,
+				DEC93E05AF8480CB2EAA6570 /* Pods_itunesTopVideosTests.framework */,
+				B2F7603113A44240CD8BE768 /* Pods_itunesTopVideosUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		80B2ED7D4F8AB4B8A45E4197 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B8DCDF224D2D035B6E63355A /* Pods-itunesTopVideos.debug.xcconfig */,
+				5F4383EE0E126AFFFDF0DC38 /* Pods-itunesTopVideos.release.xcconfig */,
+				DD8CB42218920601D54772F9 /* Pods-itunesTopVideosTests.debug.xcconfig */,
+				2646E47C53908272EE1E47D1 /* Pods-itunesTopVideosTests.release.xcconfig */,
+				39BAC0447B3FE319756747A4 /* Pods-itunesTopVideosUITests.debug.xcconfig */,
+				29207B036A7F48B223A8804A /* Pods-itunesTopVideosUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		C7525B601D352959003665F9 = {
+			isa = PBXGroup;
+			children = (
+				C7525B6B1D352959003665F9 /* itunesTopVideos */,
+				C7525B801D352959003665F9 /* itunesTopVideosTests */,
+				C7525B8B1D352959003665F9 /* itunesTopVideosUITests */,
+				C7525B6A1D352959003665F9 /* Products */,
+				80B2ED7D4F8AB4B8A45E4197 /* Pods */,
+				41DAF33E080953CE3B495D28 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		C7525B6A1D352959003665F9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C7525B691D352959003665F9 /* itunesTopVideos.app */,
+				C7525B7D1D352959003665F9 /* itunesTopVideosTests.xctest */,
+				C7525B881D352959003665F9 /* itunesTopVideosUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C7525B6B1D352959003665F9 /* itunesTopVideos */ = {
+			isa = PBXGroup;
+			children = (
+				C75FFEC61D368BB90086EE2F /* Obj-C */,
+				C788B26F1D357B4A00C5B34F /* Util */,
+				C7525B9D1D352C14003665F9 /* Supporting Files */,
+				C7525B9C1D352BC5003665F9 /* Model */,
+				C7525B9B1D352BBF003665F9 /* View */,
+				C7525B9A1D352BB8003665F9 /* Controller */,
+				C7525B6C1D352959003665F9 /* AppDelegate.swift */,
+			);
+			path = itunesTopVideos;
+			sourceTree = "<group>";
+		};
+		C7525B801D352959003665F9 /* itunesTopVideosTests */ = {
+			isa = PBXGroup;
+			children = (
+				C7525B811D352959003665F9 /* itunesTopVideosTests.swift */,
+				C7525B831D352959003665F9 /* Info.plist */,
+			);
+			path = itunesTopVideosTests;
+			sourceTree = "<group>";
+		};
+		C7525B8B1D352959003665F9 /* itunesTopVideosUITests */ = {
+			isa = PBXGroup;
+			children = (
+				C7525B8C1D352959003665F9 /* itunesTopVideosUITests.swift */,
+				C7525B8E1D352959003665F9 /* Info.plist */,
+			);
+			path = itunesTopVideosUITests;
+			sourceTree = "<group>";
+		};
+		C7525B9A1D352BB8003665F9 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				C7525B6E1D352959003665F9 /* ViewController.swift */,
+				C7761BCB1D393A3A007B6D1C /* DetailVC.swift */,
+				C7CFC9891D39660700235DEF /* SettingTVC.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		C7525B9B1D352BBF003665F9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C7B89D601D38F69600CAF6F6 /* MusicVideoCell.swift */,
+				C7525B701D352959003665F9 /* Main.storyboard */,
+				C7525B751D352959003665F9 /* LaunchScreen.storyboard */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		C7525B9C1D352BC5003665F9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C7525B9E1D3531AD003665F9 /* APIManager.swift */,
+				C788B2721D357BE400C5B34F /* MusicVideo.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		C7525B9D1D352C14003665F9 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C7525B731D352959003665F9 /* Assets.xcassets */,
+				C7525B781D352959003665F9 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C75FFEC61D368BB90086EE2F /* Obj-C */ = {
+			isa = PBXGroup;
+			children = (
+				C75FFEC81D368C690086EE2F /* Reachability.h */,
+				C75FFEC91D368C690086EE2F /* Reachability.m */,
+				C75FFEC71D368C680086EE2F /* itunesTopVideos-Bridging-Header.h */,
+			);
+			name = "Obj-C";
+			sourceTree = "<group>";
+		};
+		C788B26F1D357B4A00C5B34F /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				C788B2701D357B6700C5B34F /* Constants.swift */,
+				C7FEC6131E4B8C8E009892F6 /* ViewControllerUtils.swift */,
+			);
+			name = Util;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C7525B681D352959003665F9 /* itunesTopVideos */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C7525B911D352959003665F9 /* Build configuration list for PBXNativeTarget "itunesTopVideos" */;
+			buildPhases = (
+				086303F7B1686893D51D1107 /* [CP] Check Pods Manifest.lock */,
+				C7525B651D352959003665F9 /* Sources */,
+				C7525B661D352959003665F9 /* Frameworks */,
+				C7525B671D352959003665F9 /* Resources */,
+				2114F5B32C9A00C2995D5BA8 /* [CP] Embed Pods Frameworks */,
+				D8C8DFDC1306A30BC59D3F70 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = itunesTopVideos;
+			productName = itunesTopVideos;
+			productReference = C7525B691D352959003665F9 /* itunesTopVideos.app */;
+			productType = "com.apple.product-type.application";
+		};
+		C7525B7C1D352959003665F9 /* itunesTopVideosTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C7525B941D352959003665F9 /* Build configuration list for PBXNativeTarget "itunesTopVideosTests" */;
+			buildPhases = (
+				D6ACBCB3F44A55A7FD25BA06 /* [CP] Check Pods Manifest.lock */,
+				C7525B791D352959003665F9 /* Sources */,
+				C7525B7A1D352959003665F9 /* Frameworks */,
+				C7525B7B1D352959003665F9 /* Resources */,
+				FB2D976DEF5AF9C20EE83A16 /* [CP] Embed Pods Frameworks */,
+				C9BF1A56F5E914F09B038290 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C7525B7F1D352959003665F9 /* PBXTargetDependency */,
+			);
+			name = itunesTopVideosTests;
+			productName = itunesTopVideosTests;
+			productReference = C7525B7D1D352959003665F9 /* itunesTopVideosTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		C7525B871D352959003665F9 /* itunesTopVideosUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C7525B971D352959003665F9 /* Build configuration list for PBXNativeTarget "itunesTopVideosUITests" */;
+			buildPhases = (
+				389C2F48F48F10B9B563524A /* [CP] Check Pods Manifest.lock */,
+				C7525B841D352959003665F9 /* Sources */,
+				C7525B851D352959003665F9 /* Frameworks */,
+				C7525B861D352959003665F9 /* Resources */,
+				379F7453D22B02C670A80074 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C7525B8A1D352959003665F9 /* PBXTargetDependency */,
+			);
+			name = itunesTopVideosUITests;
+			productName = itunesTopVideosUITests;
+			productReference = C7525B881D352959003665F9 /* itunesTopVideosUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C7525B611D352959003665F9 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0810;
+				ORGANIZATIONNAME = "Prateek Mahawar";
+				TargetAttributes = {
+					C7525B681D352959003665F9 = {
+						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = 2QJCV27NGS;
+						LastSwiftMigration = 0810;
+					};
+					C7525B7C1D352959003665F9 = {
+						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = 2QJCV27NGS;
+						LastSwiftMigration = 0810;
+						TestTargetID = C7525B681D352959003665F9;
+					};
+					C7525B871D352959003665F9 = {
+						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = 2QJCV27NGS;
+						LastSwiftMigration = 0810;
+						TestTargetID = C7525B681D352959003665F9;
+					};
+				};
+			};
+			buildConfigurationList = C7525B641D352959003665F9 /* Build configuration list for PBXProject "itunesTopVideos" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C7525B601D352959003665F9;
+			productRefGroup = C7525B6A1D352959003665F9 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C7525B681D352959003665F9 /* itunesTopVideos */,
+				C7525B7C1D352959003665F9 /* itunesTopVideosTests */,
+				C7525B871D352959003665F9 /* itunesTopVideosUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C7525B671D352959003665F9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C7525B771D352959003665F9 /* LaunchScreen.storyboard in Resources */,
+				C7525B741D352959003665F9 /* Assets.xcassets in Resources */,
+				C7525B721D352959003665F9 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C7525B7B1D352959003665F9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C7525B861D352959003665F9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		086303F7B1686893D51D1107 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		2114F5B32C9A00C2995D5BA8 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-itunesTopVideos/Pods-itunesTopVideos-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		379F7453D22B02C670A80074 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-itunesTopVideosUITests/Pods-itunesTopVideosUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		389C2F48F48F10B9B563524A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		C9BF1A56F5E914F09B038290 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-itunesTopVideosTests/Pods-itunesTopVideosTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D6ACBCB3F44A55A7FD25BA06 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		D8C8DFDC1306A30BC59D3F70 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-itunesTopVideos/Pods-itunesTopVideos-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FB2D976DEF5AF9C20EE83A16 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-itunesTopVideosTests/Pods-itunesTopVideosTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C7525B651D352959003665F9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C7525B9F1D3531AD003665F9 /* APIManager.swift in Sources */,
+				C7525B6F1D352959003665F9 /* ViewController.swift in Sources */,
+				C788B2731D357BE400C5B34F /* MusicVideo.swift in Sources */,
+				C7CFC98A1D39660700235DEF /* SettingTVC.swift in Sources */,
+				C7FEC6141E4B8C8E009892F6 /* ViewControllerUtils.swift in Sources */,
+				C7525B6D1D352959003665F9 /* AppDelegate.swift in Sources */,
+				C75FFECA1D368C690086EE2F /* Reachability.m in Sources */,
+				C7761BCC1D393A3A007B6D1C /* DetailVC.swift in Sources */,
+				C788B2711D357B6700C5B34F /* Constants.swift in Sources */,
+				C7B89D611D38F69600CAF6F6 /* MusicVideoCell.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C7525B791D352959003665F9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C7525B821D352959003665F9 /* itunesTopVideosTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C7525B841D352959003665F9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C7525B8D1D352959003665F9 /* itunesTopVideosUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C7525B7F1D352959003665F9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C7525B681D352959003665F9 /* itunesTopVideos */;
+			targetProxy = C7525B7E1D352959003665F9 /* PBXContainerItemProxy */;
+		};
+		C7525B8A1D352959003665F9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C7525B681D352959003665F9 /* itunesTopVideos */;
+			targetProxy = C7525B891D352959003665F9 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		C7525B701D352959003665F9 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C7525B711D352959003665F9 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		C7525B751D352959003665F9 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C7525B761D352959003665F9 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C7525B8F1D352959003665F9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C7525B901D352959003665F9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C7525B921D352959003665F9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B8DCDF224D2D035B6E63355A /* Pods-itunesTopVideos.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				INFOPLIST_FILE = itunesTopVideos/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Prateek.itunesTopVideos;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "itunesTopVideos/itunesTopVideos-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C7525B931D352959003665F9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5F4383EE0E126AFFFDF0DC38 /* Pods-itunesTopVideos.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				INFOPLIST_FILE = itunesTopVideos/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Prateek.itunesTopVideos;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "itunesTopVideos/itunesTopVideos-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		C7525B951D352959003665F9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DD8CB42218920601D54772F9 /* Pods-itunesTopVideosTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = itunesTopVideosTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Prateek.itunesTopVideosTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/itunesTopVideos.app/itunesTopVideos";
+			};
+			name = Debug;
+		};
+		C7525B961D352959003665F9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2646E47C53908272EE1E47D1 /* Pods-itunesTopVideosTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = itunesTopVideosTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Prateek.itunesTopVideosTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/itunesTopVideos.app/itunesTopVideos";
+			};
+			name = Release;
+		};
+		C7525B981D352959003665F9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 39BAC0447B3FE319756747A4 /* Pods-itunesTopVideosUITests.debug.xcconfig */;
+			buildSettings = {
+				INFOPLIST_FILE = itunesTopVideosUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Prateek.itunesTopVideosUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = itunesTopVideos;
+			};
+			name = Debug;
+		};
+		C7525B991D352959003665F9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 29207B036A7F48B223A8804A /* Pods-itunesTopVideosUITests.release.xcconfig */;
+			buildSettings = {
+				INFOPLIST_FILE = itunesTopVideosUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Prateek.itunesTopVideosUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = itunesTopVideos;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C7525B641D352959003665F9 /* Build configuration list for PBXProject "itunesTopVideos" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C7525B8F1D352959003665F9 /* Debug */,
+				C7525B901D352959003665F9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C7525B911D352959003665F9 /* Build configuration list for PBXNativeTarget "itunesTopVideos" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C7525B921D352959003665F9 /* Debug */,
+				C7525B931D352959003665F9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C7525B941D352959003665F9 /* Build configuration list for PBXNativeTarget "itunesTopVideosTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C7525B951D352959003665F9 /* Debug */,
+				C7525B961D352959003665F9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C7525B971D352959003665F9 /* Build configuration list for PBXNativeTarget "itunesTopVideosUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C7525B981D352959003665F9 /* Debug */,
+				C7525B991D352959003665F9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C7525B611D352959003665F9 /* Project object */;
+}
